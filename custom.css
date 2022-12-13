@@ -46,10 +46,8 @@ ____________________________________________________
   --colpink: #fcd9d3;
 
   /* 1.1.2 - Fonts  */
-  --header1: 800 3rem playfair-display, serif;
-  --header2: 600 2.5rem playfair-display, serif;
-  --header3: 600 1.5rem montserrat, sans-serif;
-  --body: 400 1rem montserrat, sans-serif;
+  --header1_2: playfair-display, serif;
+  --header3_p: montserrat, sans-serif;
 
   scroll-behavior: smooth;
 
@@ -61,21 +59,30 @@ ____________________________________________________
 /* 2.0.0 - GENEREL STYLING */
 
     /* 2.1.0 - HEADERS H1-H3 */
-h1 {
-    font-family: playfair-display, sans-serif !important;
-    font-weight: 800 !important;
-    font-size: 3rem !important;
-    text-transform: uppercase !important;
-    color: var(--coldarkgreen) !important;
-}
-
-h2 {
-    font: var(--header2);
+h1,
+.entry-content h1
+h1.entry-title {
+    font-family:var(--header1_2);
+    font-weight: 800;
+    font-size: 3rem;
+    text-transform: uppercase;
     color: var(--coldarkgreen);
 }
 
-h3 {
-    font: var(--header3);
+h2,
+.entry-content h2
+ {
+    font-family: var(--header1_2);
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--coldarkgreen);
+}
+
+h3,
+.entry-content h3 {
+    font-family: var(--header3_p);
+    font-weight: 600;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: var(--coldarkgreen);
 }
@@ -83,7 +90,9 @@ h3 {
 
     /* 2.2.0 - P */
 p {
-    font: var(--body);
+    font-family: var(--header3_p);
+    font-weight: 400;
+    font-size: 1rem;
     color: var(--coldarkgreen);
     width: 65ch;
 }
