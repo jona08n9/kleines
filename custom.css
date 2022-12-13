@@ -9,47 +9,27 @@ TABLE OF CONTENT
     1.1.0 VARIABLES
         1.1.1 COLORS
         1.1.2 FONTS
-2.0.0 - GENERELT 
-    2.1.0 - HEADERS
-        2.1.1 - H1
-        2.1.2 - H2
-        2.1.3 - H3
-        2.1.4 - H4
+2.0.0 - GENEREL STLING 
+    2.1.0 - HEADERS H1-H3
     2.2.0 - P
-    2.3.0 - BUTTONS
     2.3.0 - A
+    2.4.0 - BUTTONS
+        2.4.1 PRIMARY BUTTON
+        2.4.2 SECONDARY BUTTON
 3.0.0 - HEADER
-    3.1.0 - MAIN MENU NAVIGATION
+
 4.0.0 - FOOTER
-    4.1.0 - FOOTER CONTAINER
-    4.2.0 - FOOTER TEXT
-    4.3.0 - FOOTER INFO
-        4.3.1 - LOGO
-        4.3.2 - ADRESS
-        4.3.3 - SOME
-        4.3.4 - GO TO TOP
-5.0.0 - FRONT PAGE
-    5.1.0 - H2 SPACING CHANGE
-    5.2.0 - LEAFLET MAP STYLING
-6.0.0 - VORES HOLD
-7.0.0 - NYHEDER OG ARRANGEMENTER
-8.0.0 - BLIV MEDLEM
-9.0.0 - FODBOLD
-10.0.0 - OM NØRREBRO UNITED
 
-X.X.X - MEDIA Q MIN-WIDTH 500PX
-  1.0.0 - LOGO
-  2.0.0 - ADDRESS
-  3.0.0 - SOCIALS
-  4.0.0 - TO TOP
-  5.0.0 - HEADER
-  6.0.0 - NYHEDER OG ARRANGEMENTER
+5.0.0 - PAGES
+    5.1.0 - FONT PAGE
+    5.2.0 - SMYKKER 
+    5.3.0 - OM KLEINES
+    5.4.0 - GAVEKORT TIL KLEINES
+    5.5.0 - KONTAKT
 
-X.X.X - MEDIA Q MIN-WIDTH 767PX
-  1.0.0 - FODBOLD
-  2.0.0 - VORES HOLD
-  3.0 0 - OM NØRREBRO UNITED
+6.0.0 - MEDIA Q MIN-WIDTH 500PX
 
+7.0.0 - MEDIA Q MIN-WIDTH 767PX
 ____________________________________________________
 
 /*** 1.0.0 - ROOT ***/
@@ -76,5 +56,113 @@ ____________________________________________________
   box-sizing: border-box;
 }
 
+/* 2.0.0 - GENEREL STYLING */
+
+    /* 2.1.0 - HEADERS H1-H3 */
+h1 {
+    text-transform: uppercase;
+    color: var(--coldarkgreen);
+}
+
+h2 {
+    color: var(--coldarkgreen);
+}
+
+h3 {
+    text-transform: uppercase;
+    color: var(--coldarkgreen);
+}
 
 
+    /* 2.2.0 - P */
+p {
+    color: var(--coldarkgreen);
+}
+
+    /* 2.3.0 - A */
+a {
+    text-decoration: underline;
+    color: var(--colgold);
+    transition: all .250ms ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+    /* 2.4.0 - BUTTONS */
+
+        /* 2.4.1 - PRIMARY BUTTON */
+
+button.primary {
+    border: none;
+    background-color: var(--coldarkgreen);
+    font: var(--header3);
+    color: var(--colgold);
+    text-transform: uppercase;
+    padding: 18px 32px;
+    transition: all .250ms ease-in-out;
+}
+button.primary:hover,
+button.primary:active,
+button.primary:focus {
+    border: 1px solid var(--coldarkgreen);
+    background-color: var(--colgold);
+    color: var(--coldarkgreen);
+}
+
+        /* 2.4.2 - SECONDARY BUTTON */
+
+button.secondary {
+    border: var(--coldarkgreen);
+    background-color: none;
+    font: var(--header3);
+    color: var(--coldarkgreen);
+    padding: 18px 32px;
+    transition: all .250ms ease-in-out;
+}
+button.secondary:hover,
+button.secondary:active,
+button.secondary:focus {
+    border: 2px solid var(--colblack);
+    color: var(---coldark);
+}
+
+/* 3.0.0 - HEADER */
+
+
+/* 4.0.0 - FOOTER */
+
+
+/* 5.0.0 - PAGES
+
+
+    /* 5.1.0 - FONT PAGE */
+   
+   
+    /* 5.2.0 - SMYKKER  */
+   
+   
+    /* 5.3.0 - OM KLEINES */
+   
+   
+    /* 5.4.0 - GAVEKORT TIL KLEINES */
+   
+   
+    /* 5.5.0 - KONTAKT */
+
+
+/* 6.0.0 - MEDIA Q MIN-WIDTH 500PX */
+@media screen and (width >= 500px) {
+
+
+}
+
+
+/* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
+@media screen and (width >=768px) {
+
+
+}
