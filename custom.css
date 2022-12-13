@@ -56,19 +56,26 @@ ____________________________________________________
   box-sizing: border-box;
 }
 
+main {
+    color: blue;
+}
+
 /* 2.0.0 - GENEREL STYLING */
 
     /* 2.1.0 - HEADERS H1-H3 */
 h1 {
+    font: var(--header1);
     text-transform: uppercase;
     color: var(--coldarkgreen);
 }
 
 h2 {
+    font: var(--header2);
     color: var(--coldarkgreen);
 }
 
 h3 {
+    font: var(--header3);
     text-transform: uppercase;
     color: var(--coldarkgreen);
 }
@@ -76,11 +83,13 @@ h3 {
 
     /* 2.2.0 - P */
 p {
+    font: var(--body);
     color: var(--coldarkgreen);
 }
 
     /* 2.3.0 - A */
 a {
+    font: var(--body);
     text-decoration: underline;
     color: var(--colgold);
     transition: all .250ms ease-in-out;
@@ -99,7 +108,7 @@ a:active {
 button.primary {
     border: none;
     background-color: var(--coldarkgreen);
-    font: var(--header3);
+    font: var(--body);
     color: var(--colgold);
     text-transform: uppercase;
     padding: 18px 32px;
@@ -118,7 +127,7 @@ button.primary:focus {
 button.secondary {
     border: var(--coldarkgreen);
     background-color: none;
-    font: var(--header3);
+    font: var(--body);
     color: var(--coldarkgreen);
     padding: 18px 32px;
     transition: all .250ms ease-in-out;
