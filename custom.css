@@ -85,6 +85,7 @@ h3 {
 p {
     font: var(--body);
     color: var(--coldarkgreen);
+    width: 65ch;
 }
 
     /* 2.3.0 - A */
