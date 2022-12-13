@@ -54,19 +54,19 @@ ____________________________________________________
   scroll-behavior: smooth;
 
   box-sizing: border-box;
-}
 
-main {
-    color: blue;
+  font-size: 16px;
 }
 
 /* 2.0.0 - GENEREL STYLING */
 
     /* 2.1.0 - HEADERS H1-H3 */
 h1 {
-    font: var(--header1);
-    text-transform: uppercase;
-    color: var(--coldarkgreen);
+    font-family: playfair-display, sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 3rem !important;
+    text-transform: uppercase !important;
+    color: var(--coldarkgreen) !important;
 }
 
 h2 {
