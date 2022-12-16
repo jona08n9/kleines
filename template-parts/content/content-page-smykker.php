@@ -13,7 +13,7 @@
 
 ?>
 
-
+<main>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 <div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="loopview">
-		<h3>Serier</h3>
+		<h3>Kleines smykke univers</h3>
 		<div id="filter_buttons">
 			<button class="chosen" data-type="all" >Alle smykker</button>
 			<button data-type="7" >Halskæder</button>
@@ -36,7 +36,7 @@
 			<button data-type="3" >Øreringe</button>
 		</div>
 
-		<section id="product_loopview_container">
+		<section id="product_loopview_container" class="pin_container">
 
 		</section>
 	</div>
@@ -44,10 +44,12 @@
 </div>
 </div>
 </div>
+</article><!-- .post -->
+</main>
 
 
 <template>
-<article class="product">
+<article class="product card ">
 	<img class="main_product_pic" src="" alt="">
 	<p class="product_name"></p>
 	<p class="product_price"></p>
@@ -133,11 +135,14 @@
 }})}
 
 
+
+
+
 		getJson();
 
 </script>
 
-</article><!-- .post -->
+
 
 
 
