@@ -11,6 +11,7 @@ TABLE OF CONTENT
         1.1.2 FONTS
 2.0.0 - GENEREL STLING 
     2.1.0 - HEADERS H1-H3
+        2.1.1 - LINE BY H2
     2.2.0 - P
     2.3.0 - A
     2.4.0 - BUTTONS
@@ -48,6 +49,12 @@ ____________________________________________________
   /* 1.1.2 - Fonts  */
   --header1_2: playfair-display, serif;
   --header3_p: montserrat, sans-serif;
+  --fsize1: 48px;
+  --fsize2: 40px;
+  --fsize3: 24px;
+  --fsizebut: 20px;
+  --fsizep: 16px;
+  
 
   scroll-behavior: smooth;
 
@@ -60,21 +67,22 @@ ____________________________________________________
 
     /* 2.1.0 - HEADERS H1-H3 */
 h1,
-.entry-content h1
+.entry-content h1,
 h1.entry-title {
     font-family:var(--header1_2);
     font-weight: 800;
-    font-size: 3rem;
+    font-size: var(--fsize1);
     text-transform: uppercase;
     color: var(--coldarkgreen);
 }
 
 h2,
-.entry-content h2
+.entry-content h2,
+#site-content .entry-content h2
  {
     font-family: var(--header1_2);
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: var(--fsize2);
     color: var(--coldarkgreen);
 }
 
@@ -82,17 +90,17 @@ h3,
 .entry-content h3 {
     font-family: var(--header3_p);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: var(--fsize3);
     text-transform: uppercase;
     color: var(--coldarkgreen);
 }
 
-
     /* 2.2.0 - P */
-p {
+p,
+.footer-credits p {
     font-family: var(--header3_p);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--fsizep);
     color: var(--coldarkgreen);
     width: 65ch;
 }
@@ -100,6 +108,7 @@ p {
     /* 2.3.0 - A */
 a {
     font: var(--body);
+    font-size: var(--fsizep);
     text-decoration: underline;
     color: var(--colgold);
     transition: all .250ms ease-in-out;
@@ -118,7 +127,9 @@ a:active {
 button.primary {
     border: none;
     background-color: var(--coldarkgreen);
-    font: var(--body);
+    font-family: var(--header3_p);
+    font-weight: 600;
+    font-size: var(--fsizebut);
     color: var(--colgold);
     text-transform: uppercase;
     padding: 18px 32px;
@@ -137,7 +148,10 @@ button.primary:focus {
 button.secondary {
     border: var(--coldarkgreen);
     background-color: none;
-    font: var(--body);
+    font-family: var(--header3_p);
+    font-weight: 600;
+    font-size: var(--fsizebut);
+    font-size: var(--fsizebut);
     color: var(--coldarkgreen);
     padding: 18px 32px;
     transition: all .250ms ease-in-out;
