@@ -22,6 +22,8 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/custom.css ">
 		<link rel="stylesheet" href="https://use.typekit.net/ijw0ado.css">
 
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/custom.css ">
+
 		<?php wp_head(); ?>
 
 	</head>
