@@ -18,6 +18,8 @@ TABLE OF CONTENT
         2.4.1 PRIMARY BUTTON
         2.4.2 SECONDARY BUTTON
 3.0.0 - HEADER
+    3.1.0 - XXX
+    3.2.0 - SEARCH MODULAR
 
 4.0.0 - FOOTER
 
@@ -31,6 +33,7 @@ TABLE OF CONTENT
 6.0.0 - MEDIA Q MIN-WIDTH 500PX
 
 7.0.0 - MEDIA Q MIN-WIDTH 767PX
+    7.3.2.0 - SEARCH MODULAR
 ____________________________________________________
 
 /*** 1.0.0 - ROOT ***/
@@ -102,7 +105,6 @@ p,
     font-weight: 400;
     font-size: var(--fsizep);
     color: var(--coldarkgreen);
-    width: 65ch;
 }
 
     /* 2.3.0 - A */
@@ -165,6 +167,60 @@ button.secondary:focus {
 
 /* 3.0.0 - HEADER */
 
+    /* 3.1.0 - XXX */
+ 
+    /* 3.2.0 - SEARCH MODULAR */
+
+.search-modal.show-modal.active {
+    top: 117.45px;
+}
+
+.search-modal-inner.modal-inner {
+background-color: #2f605a; 
+}
+
+.search-modal-inner div.section-inner {
+    justify-content: space-around;
+}
+
+.search-modal .search-form {
+    justify-content: center;
+}
+
+.search-modal .search-form .search-field {
+    background-color: var(--colwhite);
+    font-family: var(--header3_p);
+    font-size: var(--fsizep);
+    text-transform: uppercase;
+    width: 300px;
+    height: 5rem;
+    margin-block: 2rem;
+    margin-inline-start: 20px;
+    border: 2px solid var(--colgold);
+}
+
+.search-modal .search-form .search-field::placeholder {
+    font-family: var(--header3_p);
+    font-size: var(--fsizep);
+    text-transform: uppercase;
+}
+
+
+.search-modal .search-form label {
+    width: auto;
+}
+
+.toggle.search-untoggle {
+    border: 2px solid var(--colgold);
+    margin: 20px 10px;
+    padding-inline: 15px;
+}
+
+.toggle.search-untoggle svg.svg-icon,
+.toggle.search-untoggle svg.svg-icon polygon {
+    fill: var(--colgold);
+}
+
 
 /* 4.0.0 - FOOTER */
 
@@ -197,5 +253,20 @@ button.secondary:focus {
 /* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
 @media screen and (width >=768px) {
 
+    /* 7.2.2.0 P */
+ p {
+    width: 65ch;
+ }
+
+    /* 7.3.2.0 - SEARCH MODULAR */
+
+.search-modal.show-modal.active {
+    background: none;
+    position: static;
+    bottom: auto;
+    width: 300px;
+    right: 0;
+    left: auto;
+}
 
 }
