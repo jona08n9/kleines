@@ -55,11 +55,11 @@ ____________________________________________________
 /*** 1.0.0 - ROOT ***/
 * {
   /* 1.1.0 - VARIABLES */
-  
+
   /* 1.1.1 - COLORS */
   --colwhite: #faf9f5;
   --colblack: #181e1a;
-  --colyellow: #faf8ea
+  --colyellow: #faf8ea;
   --coldarkgreen: #2f605a;
   --colgold: #edd89d;
   --collightgreen: #a5c6be;
@@ -76,5 +76,7 @@ ____________________________________________________
   box-sizing: border-box;
 }
 
-
-
+.chosen {
+  background-color: black;
+  color: white;
+}
