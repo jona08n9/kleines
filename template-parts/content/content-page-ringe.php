@@ -16,6 +16,8 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
+<div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
+	<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
 
 <div class="content_shape">
 	<div class="header_h1">
@@ -48,6 +50,9 @@
 	<p class="product_price"></p>
 	<img class="like_icon" src="" alt="">
 </article>
+
+</div>
+</div>
 </template>
 
 </article><!-- .post -->

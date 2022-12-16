@@ -13,9 +13,11 @@
 
 ?>
 
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-
+<div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
+	<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
 
 <div class="content_shape">
 	<div class="header_h1">
@@ -40,6 +42,9 @@
 	</div>
 
 </div>
+</div>
+</div>
+
 
 <template>
 <article class="product">
@@ -50,7 +55,9 @@
 </article>
 </template>
 
-</article><!-- .post -->
+
+
+
 
 <script>
 // ********************             opretter variabler             **************************
@@ -129,3 +136,9 @@
 		getJson();
 
 </script>
+
+</article><!-- .post -->
+
+
+
+
