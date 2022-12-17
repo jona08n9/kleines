@@ -238,3 +238,11 @@ main .wp-block-columns.alignfull,
 /* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
 @media screen and (width >=768px) {
 }
+
+/* 8.0.0 - MEDIA Q MIN WIDTH 1000px */
+@media screen and (width >=1000px) {
+  #site-header .header-inner {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
