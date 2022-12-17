@@ -356,3 +356,95 @@ div.ancestor-wrapper a:hover {
     padding-right: 20px;
   }
 }
+
+@media screen and (width >= 1000px) {
+  /* HEADER */
+  #site-header .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header-inner .header-titles-wrapper {
+    margin-right: 0;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--colgold);
+  }
+
+  .header-navigation-wrapper .primary-menu li.menu-item a {
+    color: var(--colgold);
+    font-family: var(--header3_p);
+    text-transform: uppercase;
+    font-size: var(--fsize3);
+    font-weight: 600;
+  }
+
+  .header-inner .header-navigation-wrapper .header-toggles.hide-no-js {
+    position: absolute;
+    right: 100px;
+    top: 40px;
+  }
+
+  #site-header span.icon:before,
+  #site-header span.icon::after {
+    background-color: var(--colgold);
+  }
+
+  #site-header .header-navigation-wrapper {
+    padding-block-start: 28px;
+    width: 100%;
+  }
+
+  #site-header .primary-menu {
+    justify-content: space-around;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  #site-header .sub-menu {
+    width: auto;
+    border-radius: 0;
+    background-color: var(--coldarkgreen);
+    border: 2px solid var(--colgold);
+    padding: 0;
+  }
+
+  #site-header .sub-menu:after {
+    background-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  #site-header .menu-item-has-children:first-child .sub-menu {
+    transform: translate(133px, 8px);
+  }
+
+  #site-header .menu-item-has-children:nth-child(2) .sub-menu {
+    transform: translate(50px, 8px);
+  }
+
+  #site-header .sub-menu li.menu-item {
+    border-bottom: 2px solid var(--colgold);
+  }
+
+  #site-header .sub-menu li.menu-item:last-child {
+    border-bottom: none;
+  }
+
+  #site-header .sub-menu li.menu-item a {
+    padding: 2rem;
+  }
+
+  #site-header .search-toggle-wrapper::before {
+    background-color: var(--coldarkgreen);
+  }
+
+  #site-header .search-toggle-wrapper button {
+    padding: 5px;
+  }
+}
