@@ -304,6 +304,114 @@ div.ancestor-wrapper a:hover {
 
 /* 4.0.0 - FOOTER */
 
+.footer-nav-widgets-wrapper.header-footer-group {
+  background-color: var(--coldarkgreen);
+  text-align: center;
+}
+
+.footer-nav-widgets-wrapper.header-footer-group h3 {
+  font-size: var(--fsizep);
+  font-weight: 600;
+  color: var(--colgold);
+}
+
+.footer-nav-widgets-wrapper.header-footer-group p {
+  text-transform: uppercase;
+  color: var(--colgold);
+}
+
+.footer-nav-widgets-wrapper .wp-block-columns .wp-block-column {
+  margin-block-end: 30px;
+}
+.footer-nav-widgets-wrapper .wp-block-columns .wp-block-column:last-child {
+  margin-block-end: 0;
+}
+
+#site-footer.header-footer-group {
+  background-color: var(--coldarkgreen);
+}
+
+.footer-widgets-outer-wrapper {
+  border: none !important;
+}
+
+.footer-credits p,
+#site-footer a,
+#site-footer span.to-the-top-long,
+.footer-nav-widgets-wrapper .wp-block-column p a {
+  color: var(--colgold);
+  text-decoration: none;
+}
+
+.footer-nav-widgets-wrapper .wp-block-column p a:hover {
+  text-decoration: underline;
+}
+
+#site-footer .section-inner {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+#site-footer .section-inner .footer-credits {
+  margin: 20px auto 0;
+}
+
+#site-footer .section-inner .footer-credits p {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#site-footer .footer-copyright {
+  text-align: center;
+}
+
+.footer-credits .powered-by-wordpress {
+  display: block;
+}
+
+#site-footer .to-the-top {
+  margin-inline: auto;
+}
+
+/* 4.X.0 - ICONS */
+
+/* 4.x.1 - BUTIK OG ÅBNINGSTID IKONER */
+
+.wp-block-column.butik p::before {
+  display: block;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-block: 20px 10px;
+  margin-inline: auto;
+}
+
+.wp-block-column.butik p.adresse::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/icon_pin.svg");
+}
+.wp-block-column.butik p.tid::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/icon_watch.svg");
+}
+.wp-block-column.butik p.nummer::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/icon_phone.svg");
+}
+
+/* 4.x.2 - SOME IKONER */
+
+.footer-widgets ul.wp-block-social-links li.wp-social-link {
+  background-color: transparent;
+}
+.footer-widgets ul.wp-block-social-links li.wp-social-link svg {
+  fill: var(--colgold);
+  width: 30px;
+  height: 30px;
+}
+
+.footer-widgets ul.wp-block-social-links {
+  justify-content: center;
+  margin: 0;
+}
+
 /* 5.0.0 - PAGES
 
 
@@ -377,6 +485,39 @@ main .wp-block-columns.alignfull,
 
   .toggle.close-nav-toggle {
     padding-right: 20px;
+  }
+
+  /* 7.X.X.X - FOOTER */
+
+  .footer-widgets-outer-wrapper {
+    padding-bottom: 0;
+  }
+
+  .footer-nav-widgets-wrapper .footer-widgets {
+    width: 100%;
+  }
+
+  .footer-nav-widgets-wrapper .footer-widgets .wp-block-columns {
+    flex-wrap: nowrap !important;
+  }
+
+  .footer-nav-widgets-wrapper .footer-widgets .wp-block-columns .wp-block-column {
+    min-width: 200px;
+  }
+
+  .footer-nav-widgets-wrapper .footer-widgets .wp-block-columns .wp-block-column:first-child p {
+    line-height: 1.8;
+  }
+  .footer-nav-widgets-wrapper.header-footer-group {
+    text-align: left;
+  }
+
+  .footer-widgets ul.wp-block-social-links {
+    justify-content: flex-start;
+  }
+
+  .wp-block-column.butik p::before {
+    margin-inline: 0;
   }
 }
 
