@@ -39,11 +39,11 @@ ____________________________________________________
 /*** 1.0.0 - ROOT ***/
 * {
   /* 1.1.0 - VARIABLES */
-  
+
   /* 1.1.1 - COLORS */
   --colwhite: #faf9f5;
   --colblack: #181e1a;
-  --colyellow: #faf8ea
+  --colyellow: #faf8ea;
   --coldarkgreen: #2f605a;
   --colgold: #edd89d;
   --collightgreen: #a5c6be;
@@ -57,7 +57,6 @@ ____________________________________________________
   --fsize3: 24px;
   --fsizebut: 20px;
   --fsizep: 16px;
-  
 
   scroll-behavior: smooth;
 
@@ -68,205 +67,292 @@ ____________________________________________________
 
 /* 2.0.0 - GENEREL STYLING */
 
-    /* 2.1.0 - HEADERS H1-H3 */
+/* 2.1.0 - HEADERS H1-H3 */
 h1,
 .entry-content h1,
 h1.entry-title {
-    font-family:var(--header1_2);
-    font-weight: 800;
-    font-size: var(--fsize1);
-    text-transform: uppercase;
-    color: var(--coldarkgreen);
+  font-family: var(--header1_2);
+  font-weight: 800;
+  font-size: var(--fsize1);
+  text-transform: uppercase;
+  color: var(--coldarkgreen);
 }
 
 h2,
 .entry-content h2,
-#site-content .entry-content h2
- {
-    font-family: var(--header1_2);
-    font-weight: 600;
-    font-size: var(--fsize2);
-    color: var(--coldarkgreen);
+#site-content .entry-content h2 {
+  font-family: var(--header1_2);
+  font-weight: 600;
+  font-size: var(--fsize2);
+  color: var(--coldarkgreen);
 }
 
 h3,
 .entry-content h3 {
-    font-family: var(--header3_p);
-    font-weight: 600;
-    font-size: var(--fsize3);
-    text-transform: uppercase;
-    color: var(--coldarkgreen);
+  font-family: var(--header3_p);
+  font-weight: 600;
+  font-size: var(--fsize3);
+  text-transform: uppercase;
+  color: var(--coldarkgreen);
 }
 
-    /* 2.2.0 - P */
+/* 2.2.0 - P */
 p,
 .footer-credits p {
-    font-family: var(--header3_p);
-    font-weight: 400;
-    font-size: var(--fsizep);
-    color: var(--coldarkgreen);
+  font-family: var(--header3_p);
+  font-weight: 400;
+  font-size: var(--fsizep);
+  color: var(--coldarkgreen);
 }
 
-    /* 2.3.0 - A */
+/* 2.3.0 - A */
 a {
-    font: var(--body);
-    font-size: var(--fsizep);
-    text-decoration: underline;
-    color: var(--colgold);
-    transition: all .250ms ease-in-out;
+  font: var(--body);
+  font-size: var(--fsizep);
+  text-decoration: underline;
+  color: var(--colgold);
+  transition: all 0.25ms ease-in-out;
 }
 
 a:hover,
 a:focus,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-    /* 2.4.0 - BUTTONS */
+/* 2.4.0 - BUTTONS */
 
-        /* 2.4.1 - PRIMARY BUTTON */
+/* 2.4.1 - PRIMARY BUTTON */
 
 button.primary {
-    border: none;
-    background-color: var(--coldarkgreen);
-    font-family: var(--header3_p);
-    font-weight: 600;
-    font-size: var(--fsizebut);
-    color: var(--colgold);
-    text-transform: uppercase;
-    padding: 18px 32px;
-    transition: all .250ms ease-in-out;
+  border: none;
+  background-color: var(--coldarkgreen);
+  font-family: var(--header3_p);
+  font-weight: 600;
+  font-size: var(--fsizebut);
+  color: var(--colgold);
+  text-transform: uppercase;
+  padding: 18px 36px;
+  transition: all 0.25ms ease-in-out;
 }
 button.primary:hover,
 button.primary:active,
 button.primary:focus {
-    border: 1px solid var(--coldarkgreen);
-    background-color: var(--colgold);
-    color: var(--coldarkgreen);
+  border: 1px solid var(--coldarkgreen);
+  background-color: var(--colgold);
+  color: var(--coldarkgreen);
+  cursor: pointer;
 }
 
-        /* 2.4.2 - SECONDARY BUTTON */
+/* 2.4.2 - SECONDARY BUTTON */
 
 button.secondary {
-    border: var(--coldarkgreen);
-    background-color: none;
-    font-family: var(--header3_p);
-    font-weight: 600;
-    font-size: var(--fsizebut);
-    font-size: var(--fsizebut);
-    color: var(--coldarkgreen);
-    padding: 18px 32px;
-    transition: all .250ms ease-in-out;
+  border: var(--coldarkgreen);
+  background-color: none;
+  font-family: var(--header3_p);
+  font-weight: 600;
+  font-size: var(--fsizebut);
+  font-size: var(--fsizebut);
+  color: var(--coldarkgreen);
+  padding: 18px 32px;
+  transition: all 0.25ms ease-in-out;
 }
 button.secondary:hover,
 button.secondary:active,
 button.secondary:focus {
-    border: 2px solid var(--colblack);
-    color: var(---coldark);
+  border: 2px solid var(--colblack);
+  color: var(---coldark);
 }
 
 /* 3.0.0 - HEADER */
 
-    /* 3.1.0 - XXX */
- 
-    /* 3.2.0 - SEARCH MODULAR */
-
-.search-modal.show-modal.active {
-    top: 117.45px;
+#site-header.header-footer-group {
+  background-color: var(--coldarkgreen);
 }
 
-.search-modal-inner.modal-inner {
-background-color: #2f605a; 
+/* 3.1.0 - XXX */
+
+/* 3.2.0 - SEARCH MODULAR */
+
+/* 3.2.1 SEARCH ICON */
+
+.nav-toggle .toggle-icon svg path,
+#site-header .search-toggle .toggle-icon svg path,
+#site-header .search-toggle .toggle-inner svg path,
+.toggle.close-nav-toggle.fill-children-current-color {
+  fill: var(--colgold);
+  color: var(--colgold);
+}
+
+.toggle.nav-toggle .toggle-inner span.toggle-text,
+.toggle.search-toggle .toggle-inner span.toggle-text {
+  color: var(--colgold);
+}
+
+/* 3.2.2 - MODULAR */
+
+/* 3.2.2.1 - SEARCH MODULAR */
+
+.search-modal.show-modal.active {
+  top: 117.45px;
+}
+
+.search-modal.show-modal.active .search-modal-inner {
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 8%);
+}
+
+.search-modal-inner.modal-inner,
+.menu-modal-inner.modal-inner {
+  background-color: var(--coldarkgreen);
 }
 
 .search-modal-inner div.section-inner {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .search-modal .search-form {
-    justify-content: center;
+  justify-content: center;
 }
 
 .search-modal .search-form .search-field {
-    background-color: var(--colwhite);
-    font-family: var(--header3_p);
-    font-size: var(--fsizep);
-    text-transform: uppercase;
-    width: 300px;
-    height: 5rem;
-    margin-block: 2rem;
-    margin-inline-start: 20px;
-    border: 2px solid var(--colgold);
+  background-color: var(--colwhite);
+  font-family: var(--header3_p);
+  font-size: var(--fsizep);
+  text-transform: uppercase;
+  width: 300px;
+  height: 5rem;
+  margin-block: 2rem;
+  margin-inline-start: 20px;
+  border: 2px solid var(--colgold);
 }
 
 .search-modal .search-form .search-field::placeholder {
-    font-family: var(--header3_p);
-    font-size: var(--fsizep);
-    text-transform: uppercase;
+  font-family: var(--header3_p);
+  font-size: var(--fsizep);
+  text-transform: uppercase;
 }
 
-
 .search-modal .search-form label {
-    width: auto;
+  width: auto;
 }
 
 .toggle.search-untoggle {
-    border: 2px solid var(--colgold);
-    margin: 20px 10px;
-    padding-inline: 15px;
+  border: 2px solid var(--colgold);
+  margin: 20px 10px;
+  padding-inline: 15px;
 }
 
 .toggle.search-untoggle svg.svg-icon,
-.toggle.search-untoggle svg.svg-icon polygon {
-    fill: var(--colgold);
+.toggle.search-untoggle svg.svg-icon polygon,
+.toggle.sub-menu-toggle svg.svg-icon,
+.toggle.sub-menu-toggle svg.svg-icon polygon {
+  fill: var(--colgold);
 }
 
+/* 3.2.2.2 - MENU MODULAR */
+
+.mobile-menu li.menu-item {
+  border-color: var(--colgold);
+  color: var(--colgold);
+  font-family: var(--header3_p);
+  font-size: var(--fsize3);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.close-nav-toggle span.toggle-text {
+  text-transform: uppercase;
+  font-family: var(--header3_p);
+}
+
+.modal-menu a,
+.mobile-menu .modal-menu li.menu-item div.ancestor-wrapper a {
+  color: var(--colgold);
+  text-decoration: none;
+}
+
+div.ancestor-wrapper a:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+
+.modal-menu li.menu-item {
+  border-width: 2px 2px 0 2px;
+}
+
+.modal-menu li.menu-item:last-child {
+  border-width: 2px;
+}
+
+.sub-menu.active li.menu-item,
+.sub-menu.active li.menu-item:last-child {
+  border-width: 2px 0 0 1rem;
+}
+
+.mobile-menu .modal-menu div.ancestor-wrapper a {
+  padding-left: 2.5rem;
+}
 
 /* 4.0.0 - FOOTER */
-
 
 /* 5.0.0 - PAGES
 
 
     /* 5.1.0 - FONT PAGE */
-   
-   
-    /* 5.2.0 - SMYKKER  */
-   
-   
-    /* 5.3.0 - OM KLEINES */
-   
-   
-    /* 5.4.0 - GAVEKORT TIL KLEINES */
-   
-   
-    /* 5.5.0 - KONTAKT */
 
+/* 5.2.0 - SMYKKER  */
+
+/* 5.3.0 - OM KLEINES */
+
+/* 5.4.0 - GAVEKORT TIL KLEINES */
+
+/* 5.5.0 - KONTAKT */
 
 /* 6.0.0 - MEDIA Q MIN-WIDTH 500PX */
 @media screen and (width >= 500px) {
-
-
+  /* 6.3.2.0 - SEARCH MODULAR */
+  .search-modal-inner.modal-inner {
+    background-color: var(--coldarkgreen);
+    position: absolute;
+    right: 0;
+  }
 }
 
-
 /* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
-@media screen and (width >=768px) {
+@media screen and (width >=700px) {
+  /* 7.2.2.0 P */
+  p {
+    max-width: 65ch;
+  }
 
-    /* 7.2.2.0 P */
- p {
-    width: 65ch;
- }
+  /* 7.3.2.0 - SEARCH MODULAR */
 
-    /* 7.3.2.0 - SEARCH MODULAR */
-
-.search-modal.show-modal.active {
+  .search-modal.show-modal.active {
     background: none;
     position: static;
     bottom: auto;
     width: 300px;
     right: 0;
     left: auto;
-}
+  }
 
+  .search-modal-inner.modal-inner {
+    background-color: var(--coldarkgreen);
+    position: absolute;
+    right: 0;
+  }
+
+  .menu-wrapper.section-inner {
+    width: 100%;
+  }
+
+  .menu-modal .menu-modal-inner .menu-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .toggle.close-nav-toggle {
+    padding-right: 20px;
+  }
 }
