@@ -120,7 +120,8 @@ h3,
 
 /* 2.2.0 - P */
 p,
-.footer-credits p {
+.footer-credits p,
+.wp-block-column ol li {
   font-family: var(--header3_p);
   font-weight: 400;
   font-size: var(--fsizep);
@@ -543,10 +544,12 @@ div.display-images div.wp-block-column div.wp-block-cover div.wp-block-cover__in
   transition: all 250ms ease-in-out;
 }
 
-.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container,
+div.display-images div.wp-block-column div.wp-block-cover:hover div.wp-block-cover__inner-container {
   background-color: var(--colgold);
 }
-.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container h3 {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container h3,
+div.display-images div.wp-block-column div.wp-block-cover:hover div.wp-block-cover__inner-container h3 {
   color: var(--coldarkgreen);
 }
 
@@ -607,6 +610,10 @@ main .wp-block-columns.alignfull,
 /* 5.3.0 - OM KLEINES */
 
 /* 5.4.0 - GAVEKORT TIL KLEINES */
+
+.alignfull:not(.has-background) div.wp-block-columns .gavekort-knapper {
+  margin-block: 0;
+}
 
 /* 5.5.0 - KONTAKT */
 
