@@ -232,7 +232,8 @@ div.wpforms-container-full .wpforms-form div.wpforms-field textarea::placeholder
   color: rgba(47, 96, 90, 0.7);
 }
 
-div.wpforms-container div.wpforms-submit-container button.wpforms-submit {
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit,
+.gavekort-knapper .wp-block-buttons .wp-block-button a {
   border: none;
   background-color: var(--coldarkgreen);
   font-family: var(--header3_p);
@@ -241,12 +242,15 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit {
   color: var(--colgold);
   text-transform: uppercase;
   padding: 12px 20px;
-  transition: all 0.25ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 div.wpforms-container div.wpforms-submit-container button.wpforms-submit:hover,
+.gavekort-knapper .wp-block-buttons .wp-block-button a:hover,
 div.wpforms-container div.wpforms-submit-container button.wpforms-submit:active,
-div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus {
+.gavekort-knapper .wp-block-buttons .wp-block-button a:active,
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
+.gavekort-knapper .wp-block-buttons .wp-block-button a:focus {
   border: 1px solid var(--coldarkgreen);
   background-color: var(--colgold);
   color: var(--coldarkgreen);
@@ -521,18 +525,29 @@ div.ancestor-wrapper a:hover {
   padding: 0;
 }
 
-.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container,
+div.display-images div.wp-block-column div.wp-block-cover div.wp-block-cover__inner-container {
   width: 100%;
   background-color: var(--coldarkgreen);
   padding: 0;
   position: absolute;
   left: 0;
   bottom: 0;
+  transition: all 250ms ease-in-out;
 }
 
-.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container h3 {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container h3,
+div.display-images div.wp-block-column div.wp-block-cover div.wp-block-cover__inner-container h3 {
   margin: 3rem auto;
   color: var(--colgold);
+  transition: all 250ms ease-in-out;
+}
+
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container {
+  background-color: var(--colgold);
+}
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div div.wp-block-cover:hover .wp-block-cover__inner-container h3 {
+  color: var(--coldarkgreen);
 }
 
 div.wp-block-column h3.link-tekst a {
@@ -580,7 +595,8 @@ main .wp-block-columns.alignfull,
   flex-wrap: wrap;
 }
 
-#filter_buttons button {
+#filter_buttons button,
+.gavekort-knapper .wp-block-buttons .wp-block-button a {
   margin: 0 10px 10px 0;
   padding: 14px 20px;
 }
