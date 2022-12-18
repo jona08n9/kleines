@@ -173,6 +173,32 @@ button.secondary:focus {
   color: var(---coldark);
 }
 
+/* 2.4.3 - FILTER BUTTONS */
+
+#filter_buttons button {
+  background-color: var(--coldarkgreen);
+  border: 1px solid var(--coldarkgreen);
+  font-family: var(--header3_p);
+  font-size: var(--fsizep);
+  text-transform: uppercase;
+  color: var(--colgold);
+  font-weight: 400;
+}
+
+#filter_buttons button:hover,
+#filter_buttons button.chosen {
+  background-color: var(--colgold);
+  color: var(--coldarkgreen);
+  border: 1px solid var(--coldarkgreen);
+}
+
+#filter_buttons button.chosen,
+#filter_buttons button:active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
@@ -444,6 +470,24 @@ main .wp-block-columns.alignfull,
 .alignfull:not(.has-background) .wp-block-columns {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.loopview h3 {
+  text-align: center;
+}
+
+#filter_buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#filter_buttons button {
+  margin: 0 10px 10px 0;
+  padding: 14px 20px;
+}
+#filter_buttons button.chosen {
+  padding: 14px 19px;
 }
 
 /* 5.3.0 - OM KLEINES */
