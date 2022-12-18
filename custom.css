@@ -87,6 +87,10 @@ body article.page {
   margin: 0 auto 20px;
 }
 
+ol {
+  margin-inline-start: 0;
+}
+
 /* 2.1.0 - HEADERS H1-H3 */
 h1,
 .entry-content h1,
