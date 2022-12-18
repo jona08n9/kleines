@@ -36,6 +36,7 @@
 			<button data-type="3" >Øreringe</button>
 		</div>
 
+
 		<section id="product_loopview_container" class="pin_container">
 
 		</section>
@@ -50,10 +51,15 @@
 
 <template>
 <article class="product card ">
+
 	<img class="main_product_pic" src="" alt="">
+	<img class="like_icon" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/heart.svg" alt="Tryk her for at gemme">
+<img class="overlay" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/overlay_test_3.png">
+	<div class="product_quick_info">
 	<p class="product_name"></p>
 	<p class="product_price"></p>
-	<img class="like_icon" src="" alt="">
+	</div>
+	
 </article>
 </template>
 
@@ -126,7 +132,7 @@
 			const clone = template.cloneNode(true).content;
 			clone.querySelector(".main_product_pic").src = product.produktbillede[0].guid;
 			clone.querySelector(".product_name").textContent = product.title.rendered;
-			clone.querySelector(".product_price").textContent = product.pris;
+			clone.querySelector(".product_price").textContent = product.pris + " kr.";
 
 
 			clone.querySelector(".product").addEventListener("click", () =>{
