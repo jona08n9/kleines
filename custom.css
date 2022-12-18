@@ -83,8 +83,14 @@ body article.page {
   margin-inline: auto;
 }
 
-.entry-content > .is-layout-flex.wp-container-6.wp-block-columns,
-.entry-content > .is-layout-flex.wp-container-10.wp-block-columns {
+.entry-content > .wp-block-column {
+  padding-bottom: 30px;
+}
+
+.entry-content + .is-layout-flex.wp-container-6.wp-block-columns,
+.entry-content + .is-layout-flex.wp-container-10.wp-block-columns,
+.home div.is-layout-flex.wp-container-10.wp-block-columns.alignfull,
+.home div.is-layout-flex.wp-container-20.wp-block-columns {
   margin: 0 auto 20px;
 }
 
@@ -102,7 +108,11 @@ h1.entry-title {
   font-size: var(--fsize1);
   text-transform: uppercase;
   color: var(--coldarkgreen);
-  margin: 20px auto;
+  margin: 30px auto 20px;
+  padding-block: 18px 26px;
+  border-top: 2px solid var(--coldarkgreen);
+  border-bottom: 2px solid var(--coldarkgreen);
+  max-width: 85vw;
 }
 
 h2,
@@ -132,6 +142,15 @@ p,
   font-size: var(--fsizep);
   color: var(--coldarkgreen);
   max-width: 65ch;
+}
+
+.entry-content p,
+.entry-content .koeb-gavekort li {
+  margin-inline: auto;
+}
+
+.koeb-gavekort ol {
+  padding-inline-start: 20px !important;
 }
 
 /* 2.3.0 - A */
@@ -511,6 +530,19 @@ div.ancestor-wrapper a:hover {
   margin: 0;
 }
 
+/* 2.x.3 - H1 IKONER */
+
+div.wp-block-column h1::before,
+div.header_h1 h1::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
+  width: 30px;
+  height: 40px;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
 /* 5.0.0 - PAGES
 
     /* 5.1.0 - FONT PAGE */
@@ -586,7 +618,8 @@ main .wp-block-columns.alignfull,
   padding-right: 1rem;
 }
 
-.loopview h3 {
+.loopview h3,
+div.header_h1 h1 {
   text-align: center;
 }
 
@@ -792,5 +825,11 @@ main .wp-block-columns.alignfull,
 
   #site-header .sub-menu li.menu-item a {
     padding: 2rem;
+  }
+
+  /* OM KLEINES */
+
+  div.entry-content > .alignfull:not(.wp-block-group.has-background) {
+    margin-top: 1rem;
   }
 }
