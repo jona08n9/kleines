@@ -77,20 +77,27 @@ ____________________________________________________
 
 /* 2.0.0 - GENEREL STYLING */
 
-.entry-content {
+.entry-content,
+body article.page {
   max-width: 1500px;
   margin-inline: auto;
+}
+
+.entry-content > .is-layout-flex.wp-container-6.wp-block-columns {
+  margin: 0 auto 20px;
 }
 
 /* 2.1.0 - HEADERS H1-H3 */
 h1,
 .entry-content h1,
+div.entry-content .wp-block-column h1,
 h1.entry-title {
   font-family: var(--header1_2);
   font-weight: 800;
   font-size: var(--fsize1);
   text-transform: uppercase;
   color: var(--coldarkgreen);
+  margin: 20px auto;
 }
 
 h2,
@@ -498,23 +505,23 @@ div.ancestor-wrapper a:hover {
 
     /* 5.1.0 - FONT PAGE */
 
-body.home #site-content header.entry-header {
+#site-content header.entry-header {
   display: none;
 }
 
-body.home #site-content .post-inner.thin {
+.home #site-content .post-inner.thin {
   padding-top: 0;
 }
 
-body.home #site-content .post-inner.thin .entry-content > div:first-child {
+.home #site-content .post-inner.thin .entry-content > div:first-child {
   margin-top: 30px;
 }
 
-body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div > div {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div > div {
   padding: 0;
 }
 
-body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container {
   width: 100%;
   background-color: var(--coldarkgreen);
   padding: 0;
@@ -523,7 +530,7 @@ body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div
   bottom: 0;
 }
 
-body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container h3 {
+.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container h3 {
   margin: 3rem auto;
   color: var(--colgold);
 }
@@ -566,7 +573,8 @@ main .wp-block-columns.alignfull,
   text-align: center;
 }
 
-#filter_buttons {
+#filter_buttons,
+.gavekort-knapper .wp-block-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
