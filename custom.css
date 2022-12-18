@@ -83,7 +83,8 @@ body article.page {
   margin-inline: auto;
 }
 
-.entry-content > .is-layout-flex.wp-container-6.wp-block-columns {
+.entry-content > .is-layout-flex.wp-container-6.wp-block-columns,
+.entry-content > .is-layout-flex.wp-container-10.wp-block-columns {
   margin: 0 auto 20px;
 }
 
@@ -574,12 +575,6 @@ body main .is-layout-flex > * {
   margin: 0 auto;
 }
 
-.card {
-  padding: 0px;
-  margin: 15px 10px;
-  border-radius: var(--card_border_radius);
-}
-
 .card img {
   object-fit: cover;
   height: 100%;
@@ -617,6 +612,10 @@ main .wp-block-columns.alignfull,
 
 .alignfull:not(.has-background) div.wp-block-columns .gavekort-knapper {
   margin-block: 0;
+}
+
+#site-content > article > .post-inner.thin {
+  padding: 0;
 }
 
 /* 5.5.0 - KONTAKT */
