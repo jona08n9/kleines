@@ -17,6 +17,7 @@ TABLE OF CONTENT
     2.4.0 - BUTTONS
         2.4.1 PRIMARY BUTTON
         2.4.2 SECONDARY BUTTON
+    2.5.0 - FORM
 3.0.0 - HEADER
     3.1.0 - XXX
     3.2.0 - SEARCH MODULAR
@@ -42,7 +43,7 @@ ____________________________________________________
 
   /* 1.1.1 - COLORS */
   --colwhite: #faf9f5;
-  --colblack: #181e1a;
+  --colblack: #303030;
   --colyellow: #faf8ea;
   --colyellow: #faf8ea;
   --coldarkgreen: #2f605a;
@@ -75,6 +76,11 @@ ____________________________________________________
 }
 
 /* 2.0.0 - GENEREL STYLING */
+
+.entry-content {
+  max-width: 1500px;
+  margin-inline: auto;
+}
 
 /* 2.1.0 - HEADERS H1-H3 */
 h1,
@@ -199,6 +205,46 @@ button.secondary:focus {
   text-underline-offset: 3px;
 }
 
+/* 2.5.0 - FORM */
+
+div.wpforms-container-full .wpforms-form label.wpforms-field-label,
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form div.wpforms-field-description,
+div.wpforms-container-full .wpforms-form ul,
+div.wpforms-container-full .wpforms-form ul li,
+div.wpforms-container-full .wpforms-form div.wpforms-field textarea {
+  font-family: var(--header3_p);
+  font-size: var(--fsizep);
+  color: var(--colblack);
+}
+
+div.wpforms-container-full .wpforms-form input::placeholder,
+div.wpforms-container-full .wpforms-form div.wpforms-field textarea::placeholder {
+  font-family: var(--header3_p);
+  font-size: var(--fsizep);
+  color: rgba(47, 96, 90, 0.7);
+}
+
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit {
+  border: none;
+  background-color: var(--coldarkgreen);
+  font-family: var(--header3_p);
+  font-weight: 600;
+  font-size: var(--fsizep);
+  color: var(--colgold);
+  text-transform: uppercase;
+  padding: 12px 20px;
+  transition: all 0.25ms ease-in-out;
+}
+
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit:hover,
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit:active,
+div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus {
+  border: 1px solid var(--coldarkgreen);
+  background-color: var(--colgold);
+  color: var(--coldarkgreen);
+  padding: 11px 19px;
+}
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
@@ -232,6 +278,10 @@ button.secondary:focus {
   top: -9999rem;
   z-index: 100;
   transition: opacity 0.2s linear, left 0s 0.2s linear, top 0s 0.2s linear;
+}
+
+.search-modal-inner.modal-inner {
+  z-index: 100;
 }
 
 .search-modal.show-modal.active {
@@ -446,8 +496,48 @@ div.ancestor-wrapper a:hover {
 
 /* 5.0.0 - PAGES
 
-
     /* 5.1.0 - FONT PAGE */
+
+body.home #site-content header.entry-header {
+  display: none;
+}
+
+body.home #site-content .post-inner.thin {
+  padding-top: 0;
+}
+
+body.home #site-content .post-inner.thin .entry-content > div:first-child {
+  margin-top: 30px;
+}
+
+body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div > div {
+  padding: 0;
+}
+
+body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container {
+  width: 100%;
+  background-color: var(--coldarkgreen);
+  padding: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+body.home #site-content .post-inner.thin .entry-content > div:nth-child(2) > div > div > div .wp-block-cover__inner-container h3 {
+  margin: 3rem auto;
+  color: var(--colgold);
+}
+
+div.wp-block-column h3.link-tekst a {
+  font-size: var(--fsize3);
+  text-decoration: none;
+  color: var(---coldark);
+}
+
+div.wp-block-column h3.link-tekst a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* 5.2.0 - SMYKKER  */
 
@@ -568,6 +658,14 @@ main .wp-block-columns.alignfull,
 
   .wp-block-column.butik p::before {
     margin-inline: 0;
+  }
+}
+
+@media screen and (width >= 782px) {
+  /* FRONTPAGE */
+  body.home #site-content .post-inner.thin .entry-content > div:first-child,
+  body.home #site-content .post-inner.thin .entry-content > div:first-child > div > div {
+    padding-left: 0;
   }
 }
 
