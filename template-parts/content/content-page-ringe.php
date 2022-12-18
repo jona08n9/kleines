@@ -13,46 +13,54 @@
 
 ?>
 
+<main>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
 
 <div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
 	<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
 
 <div class="content_shape">
 	<div class="header_h1">
-		<h1>Alle smykker</h1>
+		<h1>Ringe</h1>
 	</div>
 	<div class="info_text">
 		<p>Alle Kleines designs er unikke og priserne kan derfor variere. For mine produkter er der ca. 14 dages leveringstid. Har du nogle specifikke ønsker eller spørgsmål, så udfyld kontaktformuleren.</p>
 	</div>
 
 	<div class="loopview">
-		<h3>Serier</h3>
+		<h3>Kleines smykke univers</h3>
 		<div id="filter_buttons">
-			<button  data-type="all" >Alle smykker</button>
-			<button  data-type="7" >Halskæder</button>
-			<button class="chosen" data-type="22" >Ringe</button>
-			<button data-type="3" >Øreringe</button>
+			<button  data-type="all" data-type_name="alle smykker">Alle smykker</button>
+			<button data-type="7"  data-type_name="halskæder" >Halskæder</button>
+			<button class="chosen" data-type="22" data-type_name="ringe" >Ringe</button>
+			<button  data-type="3" data-type_name="øreringe" >Øreringe</button>
 		</div>
 
-		<section id="product_loopview_container">
+
+		<section id="product_loopview_container" class="pin_container">
 
 		</section>
 	</div>
 
 </div>
+</div>
+</div>
+</article><!-- .post -->
+</main>
+
 
 <template>
-<article class="product">
+<article class="product card ">
+
 	<img class="main_product_pic" src="" alt="">
+	<img class="like_icon" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/heart.svg" alt="Tryk her for at gemme">
+<img class="overlay" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/overlay_test_3.png">
+	<div class="product_quick_info">
 	<p class="product_name"></p>
 	<p class="product_price"></p>
-	<img class="like_icon" src="" alt="">
+	</div>
+	
 </article>
-
-</div>
-</div>
 </template>
 
 </article><!-- .post -->
@@ -106,6 +114,9 @@
 		filter_product = this.dataset.type;
 		this.classList.add("chosen");
 		showProducts();
+
+		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name;
+
 	}
 
 

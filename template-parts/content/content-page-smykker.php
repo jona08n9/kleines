@@ -30,10 +30,10 @@
 	<div class="loopview">
 		<h3>Kleines smykke univers</h3>
 		<div id="filter_buttons">
-			<button class="chosen" data-type="all" >Alle smykker</button>
-			<button data-type="7" >Halskæder</button>
-			<button data-type="22" >Ringe</button>
-			<button data-type="3" >Øreringe</button>
+			<button class="chosen" data-type="all" data-type_name="alle smykker">Alle smykker</button>
+			<button data-type="7"  data-type_name="halskæder" >Halskæder</button>
+			<button  data-type="22" data-type_name="ringe" >Ringe</button>
+			<button  data-type="3" data-type_name="øreringe" >Øreringe</button>
 		</div>
 
 
@@ -116,6 +116,10 @@
 		filter_product = this.dataset.type;
 		this.classList.add("chosen");
 		showProducts();
+	
+		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name;
+
+	
 	}
 
 
