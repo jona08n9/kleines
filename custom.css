@@ -202,6 +202,12 @@ button.secondary:focus {
 
 /* 3.2.2.1 - SEARCH MODULAR */
 
+.search-modal {
+  top: -9999rem;
+  z-index: 100;
+  transition: opacity 0.2s linear, left 0s 0.2s linear, top 0s 0.2s linear;
+}
+
 .search-modal.show-modal.active {
   top: 117.45px;
 }
