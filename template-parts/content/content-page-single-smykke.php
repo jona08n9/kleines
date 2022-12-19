@@ -47,7 +47,9 @@
 <p class="product_text"></p>
 
 <div class="grid">
+
 <div id="materials_container">
+<p class="om-smykket--text">Brugte materialer</p>
 	
 </div>
 <button class="put_in_basket_btn">Læg i kurv</button>
@@ -79,6 +81,7 @@
 
 <template id="material_container">
 	<div class="material_container--inner">
+		
 		<img class="material_pic" src="" alt="">
 		<p class="material_name"></p>
     </div>
@@ -111,7 +114,7 @@
 
 	
 
-	const url="https://madvigux.dk/kleines/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
+	const url="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
 		async function getJson(){
 			console.log("id er", <?php echo get_the_ID() ?> )
 			let response = await fetch(url);
@@ -126,7 +129,10 @@
 				document.querySelector(".product_text").textContent = `${product.kort_om_produktet}`;
 				document.querySelector(".price").textContent = `Pris: ${product.pris} ,-`;
 				
-
+if(product.poduktvideo ==false){
+	console.log("no vid");
+}
+else{
 				product.poduktvideo.forEach(video => {
 
 					const clone = video_template.cloneNode(true).content;
@@ -135,7 +141,7 @@
 					product_videos_container.appendChild(clone);
 
 
-				})
+				})}
 
 
 				product.produktbillede.forEach(picture => {
