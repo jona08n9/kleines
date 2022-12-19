@@ -830,12 +830,12 @@ div.header_h1 h1 {
   }
 
   .product.card {
-    transition: all 150ms ease-in-out;
+    transition: all 250ms ease-out;
     overflow: hidden;
   }
 
   .card:hover {
-    scale: 110%;
+    scale: 103%;
   }
   .like_icon,
   .overlay {

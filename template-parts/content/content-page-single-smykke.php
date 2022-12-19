@@ -25,9 +25,11 @@
 
 
 <div id="product_pics">
-	
+<div class="product_videos"></div>
 
 </div>
+
+
 
 <div class="product_info">
 <h2 class="product_name"></h2>
@@ -70,6 +72,16 @@
 	<p class="material_name"></p>
 </template>
 
+
+<template id="video_template">
+<video class="product_video" controls autoplay muted loop width="100%">
+
+  <source src="" type="video/mp4"> 
+
+
+</video> 
+</template>
+
 <script>
 
 	let product;
@@ -77,11 +89,14 @@
 	const template = document.querySelector("template");
 	const template_material = document.querySelector("#material_container");
 	const materials_container = document.querySelector("#materials_container");
+	const video_template = document.querySelector("#video_template");
+	const product_videos_container = document.querySelector(".product_videos");
+
 	let material_name_count = 0;
 
 	
 
-	const url="https://madvigux.dk/kleines/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
+	const url="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
 		async function getJson(){
 			console.log("id er", <?php echo get_the_ID() ?> )
 			let response = await fetch(url);
@@ -96,6 +111,17 @@
 				document.querySelector(".product_text").textContent = product.kort_om_produktet;
 				document.querySelector(".price").textContent = product.pris;
 				
+
+				product.poduktvideo.forEach(video => {
+
+					const clone = video_template.cloneNode(true).content;
+					clone.querySelector(".product_video").src = video.guid;
+					product_videos_container.appendChild(clone);
+
+
+				})
+
+
 				product.produktbillede.forEach(picture => {
 
 					const clone = template.cloneNode(true).content;
