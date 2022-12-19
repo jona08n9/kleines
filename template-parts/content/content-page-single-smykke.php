@@ -22,8 +22,6 @@
 
 <section class="content_shape">
 
-
-
 <div id="product_pics">
 <div class="product_videos"></div>
 
@@ -34,6 +32,7 @@
 <div class="product_info">
 <h2 class="product_name"></h2>
 <h3 class="price"></h3>
+<p class="om-smykket--text">Om smykket:</p>
 <p class="product_text"></p>
 
 <div class="grid">
@@ -68,8 +67,10 @@
 </template>
 
 <template id="material_container">
-	<img class="material_pic" src="" alt="">
-	<p class="material_name"></p>
+	<div class="material_container--inner">
+		<img class="material_pic" src="" alt="">
+		<p class="material_name"></p>
+    </div>
 </template>
 
 
@@ -108,8 +109,8 @@
 		function visProduct(){
 			
 				document.querySelector(".product_name").textContent = product.title.rendered;
-				document.querySelector(".product_text").textContent = product.kort_om_produktet;
-				document.querySelector(".price").textContent = product.pris;
+				document.querySelector(".product_text").textContent = `${product.kort_om_produktet}`;
+				document.querySelector(".price").textContent = `Pris: ${product.pris} ,-`;
 				
 
 				product.poduktvideo.forEach(video => {
