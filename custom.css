@@ -311,10 +311,6 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   list-style: square;
 }
 
-h1.has-text-align-center {
-  margin-top: 40px;
-}
-
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
@@ -795,6 +791,21 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
 
 /* 6.0.0 - MEDIA Q MIN-WIDTH 500PX */
 @media screen and (width >= 500px) {
+  .poly_green {
+    clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #a5c6be;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
+  }
+
+  .poly_pink {
+    clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #fcd9d3;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
+  }
 }
 
 /* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
@@ -835,21 +846,6 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 
   /* 7.3.3.0 */
-  .poly_left {
-    clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-    background-color: #a5c6be;
-    padding-block-start: 200px;
-    padding-block-end: 150px;
-    margin-block-end: 0 !important;
-  }
-
-  .poly_right {
-    clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-    background-color: #fcd9d3;
-    padding-block-start: 200px;
-    padding-block-end: 150px;
-    margin-block-end: 0 !important;
-  }
 
   /* 7.X.X.X - FOOTER */
 
@@ -974,6 +970,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
+/* Vinduet er mindre end 700px */
 @media screen and (width < 700px) {
   #product_pics {
     display: grid;
@@ -984,6 +981,21 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   #materials_container {
     display: flex;
     flex-direction: column;
+  }
+  .poly_green {
+    clip-path: polygon(0px 7%, 32.48% 3px, 99.49% 7.79%, 99.29% 97.02%, 3px 99.98%, 0px 30%);
+    background-color: #a5c6be;
+    padding-block-start: 120px;
+    padding-block-end: 70px;
+    margin-block-end: 0 !important;
+  }
+
+  .poly_pink {
+    clip-path: polygon(0px 3.5%, 58.45% 6px, 99.75% 1.84%, 99.5% 96.15%, 2px 99.1%, 0px 30%);
+    background-color: #fcd9d3;
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+    margin-block-end: 0 !important;
   }
 }
 
