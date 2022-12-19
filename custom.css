@@ -590,13 +590,13 @@ div.display-images div.wp-block-column div.wp-block-cover:hover div.wp-block-cov
   color: var(--coldarkgreen);
 }
 
-div.wp-block-column h3.link-tekst a {
-  font-size: var(--fsize3);
+div.wp-block-column p.link-tekst a {
+  font-size: var(--fsizep);
   text-decoration: none;
   color: var(---coldark);
 }
 
-div.wp-block-column h3.link-tekst a:hover {
+div.wp-block-column p.link-tekst a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
