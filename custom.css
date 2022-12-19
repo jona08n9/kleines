@@ -18,6 +18,7 @@ TABLE OF CONTENT
         2.4.1 PRIMARY BUTTON
         2.4.2 SECONDARY BUTTON
     2.5.0 - FORM
+    2.5.1 - LIST-STYLE
 3.0.0 - HEADER
     3.1.0 - XXX
     3.2.0 - SEARCH MODULAR
@@ -153,7 +154,6 @@ p,
   padding-inline-start: 20px !important;
 }
 
-
 /* 2.3.0 - A */
 a {
   font: var(--body);
@@ -281,6 +281,16 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   background-color: var(--colgold);
   color: var(--coldarkgreen);
   padding: 11px 19px;
+}
+
+/* 2.5.1 - LIST-STYLE */
+
+.list-style {
+  font-family: var(--header3_p);
+  font-weight: 400;
+  font-size: var(--fsizep);
+  color: var(--coldarkgreen);
+  list-style: square;
 }
 /* 3.0.0 - HEADER */
 
