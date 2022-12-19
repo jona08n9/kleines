@@ -300,7 +300,7 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
 
 /* 2.6.0 - POLYGON / CLIP PATH */
 
-.poly_left {
+.poly_green {
   clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
   background-color: #a5c6be;
   padding-block-start: 200px;
@@ -308,7 +308,7 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   margin-block-end: 0 !important;
 }
 
-.poly_right {
+.poly_pink {
   clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
   background-color: #fcd9d3;
   padding-block-start: 200px;
@@ -972,19 +972,19 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     flex-direction: column;
   }
 
-  .poly_left {
-    clip-path: polygon(0px 7%, 32.48% 3px, 99.49% 7.79%, 99.03% 83.78%, 3px 91.37%, 0px 30%);
+  .poly_green {
+    clip-path: polygon(0px 7%, 32.48% 3px, 99.49% 7.79%, 99.29% 97.02%, 3px 99.98%, 0px 30%);
     background-color: #a5c6be;
     padding-block-start: 120px;
-    padding-block-end: 170px;
+    padding-block-end: 70px;
     margin-block-end: 0 !important;
   }
 
-  .poly_right {
-    clip-path: polygon(1px 2.67%, 59.52% 9px, 99.75% 1.84%, 99.77% 99.89%, 2px 99.1%, 0px 30%);
+  .poly_pink {
+    clip-path: polygon(0px 3.5%, 58.45% 6px, 99.75% 1.84%, 99.5% 96.15%, 2px 99.1%, 0px 30%);
     background-color: #fcd9d3;
     padding-block-start: 80px;
-    padding-block-end: 0px;
+    padding-block-end: 80px;
     margin-block-end: 0 !important;
   }
 }
