@@ -811,7 +811,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
 #popup-container #close {
   position: fixed;
   padding: 20px;
-  font-size: 1.7em;
+  font-size: 2.5em;
   font-weight: bolder;
   color: white;
   cursor: pointer;
@@ -826,7 +826,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  margin: 25% auto auto;
+  margin: 50px auto auto;
   border-radius: 5px;
 }
 
@@ -834,6 +834,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   width: 100%;
   height: auto;
   margin: auto;
+  padding: 20px;
 }
 
 /* 5.3.0 - OM KLEINES */
