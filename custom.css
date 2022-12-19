@@ -181,7 +181,7 @@ button.primary {
   font-size: var(--fsizebut);
   color: var(--colgold);
   text-transform: uppercase;
-  padding: 18px 32px;
+  padding: 13px 32px;
   transition: all 0.25ms ease-in-out;
 }
 button.primary:hover,
@@ -214,7 +214,8 @@ button.secondary:focus {
 
 /* 2.4.3 - FILTER BUTTONS */
 
-#filter_buttons button {
+#filter_buttons button,
+#main--single-smykke .put_in_basket_btn {
   background-color: var(--coldarkgreen);
   border: 1px solid var(--coldarkgreen);
   font-family: var(--header3_p);
@@ -222,20 +223,34 @@ button.secondary:focus {
   text-transform: uppercase;
   color: var(--colgold);
   font-weight: 400;
+  transition: all 250ms ease-in-out;
+  padding: 12px 24px;
 }
 
 #filter_buttons button:hover,
-#filter_buttons button.chosen {
+#filter_buttons button.chosen,
+#main--single-smykke .put_in_basket_btn:hover {
   background-color: var(--colgold);
   color: var(--coldarkgreen);
-  border: 1px solid var(--coldarkgreen);
 }
 
 #filter_buttons button.chosen,
-#filter_buttons button:active {
+#filter_buttons button:active,
+#main--single-smykke .put_in_basket_btn:active {
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+#main--single-smykke .put_in_basket_btn {
+  max-width: 200px;
+  justify-self: end;
+  margin-right: 10px;
+}
+
+#main--single-smykke .put_in_basket_btn:hover {
+  text-decoration: none;
 }
 
 /* 2.5.0 - FORM */
@@ -674,6 +689,78 @@ div.header_h1 h1 {
   display: none;
 }
 
+/* 5.3.0 - SINGLE SMYKKER */
+
+main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
+  padding: 30px;
+  margin: 15px auto 0;
+}
+
+#main--single-smykke .product_info {
+  position: relative;
+}
+
+#main--single-smykke .product_info .product_name {
+  margin-top: 0;
+  padding-block: 5px 10px;
+  border-top: 2px solid var(--coldarkgreen);
+  border-bottom: 2px solid var(--coldarkgreen);
+  max-width: 85%;
+  margin-inline: auto;
+}
+
+#main--single-smykke .product_name::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
+  width: 25px;
+  height: 35px;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+#main--single-smykke .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+}
+#materials_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+#materials_container .material_container--inner {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+#materials_container .material_pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.product_info p.om-smykket--text {
+  margin: 0;
+  font-weight: 600;
+}
+
+.product_info .price {
+  text-transform: none;
+}
+
+#materials_container .material_name {
+  margin: 0;
+}
+
+.product_info h3.price {
+  margin: 20px auto 10px;
+}
+
 /* 5.3.0 - OM KLEINES */
 
 /* 5.4.0 - GAVEKORT TIL KLEINES */
@@ -852,6 +939,37 @@ div.header_h1 h1 {
   }
 }
 
+@media screen and (width < 700px) {
+  #product_pics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #materials_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (700px <= width < 1000px) {
+  #product_pics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media screen and (width <= 1000px) {
+  #main--single-smykke .content_shape {
+    padding-top: 0;
+  }
+
+  #product_pics {
+    padding-inline: 30px;
+  }
+}
+
 @media screen and (width >= 1000px) {
   /* HEADER */
   #site-header .header-inner {
@@ -948,8 +1066,13 @@ div.header_h1 h1 {
   div.entry-content > .alignfull:not(.wp-block-group.has-background) {
     margin-top: 1rem;
   }
-
   /* SINGLE VIEW */
+
+  #main--single-smykke {
+    max-width: 1500px;
+    margin-inline: auto;
+  }
+
   main#main--single-smykke .content_shape {
     padding-top: 0;
   }
@@ -965,18 +1088,23 @@ div.header_h1 h1 {
     justify-content: space-between;
   }
 
-  main#main--single-smykke div.wp-block-columns section.content_shape div#product_pics,
-  main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
-    display: inline-block;
-    width: 49%;
+  #materials_container {
+    display: flex;
+    flex-direction: column;
   }
 
-  #main--single-smykke .product_info .product_name {
-    margin-top: 0;
-    padding-block: 5px 10px;
-    border-top: 2px solid var(--coldarkgreen);
-    border-bottom: 2px solid var(--coldarkgreen);
-    max-width: 85%;
+  main#main--single-smykke div.wp-block-columns section.content_shape div#product_pics {
+    display: inline-block;
+    width: 53%;
+  }
+
+  main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
+    display: inline-block;
+    width: 45%;
+    padding: 20px 30px;
+    background-color: var(--colpink);
+    position: sticky;
+    top: 15%;
   }
 
   #main--single-smykke .product_name::before {
@@ -985,7 +1113,16 @@ div.header_h1 h1 {
     height: 35px;
     z-index: 20;
     position: absolute;
-    top: -32px;
-    left: 74%;
+    top: -10px;
+    left: 50%;
+  }
+}
+
+@media screen and (width >= 1221px) {
+  #materials_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
   }
 }
