@@ -9,7 +9,7 @@ TABLE OF CONTENT
     1.1.0 VARIABLES
         1.1.1 COLORS
         1.1.2 FONTS
-2.0.0 - GENEREL STLING 
+2.0.0 - GENEREL STYLING 
     2.1.0 - HEADERS H1-H3
         2.1.1 - LINE BY H2
     2.2.0 - P
@@ -18,6 +18,7 @@ TABLE OF CONTENT
         2.4.1 PRIMARY BUTTON
         2.4.2 SECONDARY BUTTON
     2.5.0 - FORM
+    2.6.0 - POLYGON / CLIP PATH
 3.0.0 - HEADER
     3.1.0 - XXX
     3.2.0 - SEARCH MODULAR
@@ -297,6 +298,9 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   color: var(--coldarkgreen);
   padding: 11px 19px;
 }
+
+/* 2.6.0 - POLYGON / CLIP PATH */
+
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
@@ -814,6 +818,23 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
 
   .toggle.close-nav-toggle {
     padding-right: 20px;
+  }
+
+  /* 7.3.3.0 */
+  .poly_left {
+    clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #a5c6be;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
+  }
+
+  .poly_right {
+    clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #fcd9d3;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
   }
 
   /* 7.X.X.X - FOOTER */
