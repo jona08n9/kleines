@@ -48,6 +48,8 @@
 </div>
 </article><!-- .post -->
 </main>
+<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+
 
 
 <template>
