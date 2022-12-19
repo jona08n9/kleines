@@ -153,6 +153,13 @@ p,
   padding-inline-start: 20px !important;
 }
 
+li {
+  font-family: var(--header3_p);
+  font-weight: 400;
+  font-size: var(--fsizep);
+  color: var(--coldarkgreen);
+}
+
 /* 2.3.0 - A */
 a {
   font: var(--body);
