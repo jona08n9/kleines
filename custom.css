@@ -987,4 +987,9 @@ div.header_h1 h1 {
     top: -32px;
     left: 74%;
   }
+
+  #materials_container .material_pic {
+    width: 30px;
+    border-radius: 50%;
+  }
 }
