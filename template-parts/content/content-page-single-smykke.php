@@ -30,8 +30,8 @@
 </div>
 
 <div class="product_info">
-<h1 class="product_name"></h1>
-<h2 class="price"></h2>
+<h2 class="product_name"></h2>
+<h3 class="price"></h3>
 <p class="product_text"></p>
 
 <div class="grid">

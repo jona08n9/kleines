@@ -770,7 +770,7 @@ div.header_h1 h1 {
   }
 }
 
-/* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
+/* 7.0.0 - MEDIA Q MIN-WIDTH 768PX */
 @media screen and (width >=768px) {
   #filter_buttons {
     display: flex;
@@ -946,11 +946,15 @@ div.header_h1 h1 {
   div.entry-content > .alignfull:not(.wp-block-group.has-background) {
     margin-top: 1rem;
   }
+
   /* SINGLE VIEW */
+  main#main--single-smykke .content_shape {
+    padding-top: 0;
+  }
+
   main#main--single-smykke div.wp-block-columns,
   main#main--single-smykke div.wp-block-columns div.wp-block-columns {
     padding-left: 0;
-    padding-right: 0;
   }
 
   main#main--single-smykke div.wp-block-columns section.content_shape {
@@ -963,5 +967,23 @@ div.header_h1 h1 {
   main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
     display: inline-block;
     width: 49%;
+  }
+
+  #main--single-smykke .product_info .product_name {
+    margin-top: 0;
+    padding-block: 5px 10px;
+    border-top: 2px solid var(--coldarkgreen);
+    border-bottom: 2px solid var(--coldarkgreen);
+    max-width: 85%;
+  }
+
+  #main--single-smykke .product_name::before {
+    content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
+    width: 25px;
+    height: 35px;
+    z-index: 20;
+    position: absolute;
+    top: -32px;
+    left: 74%;
   }
 }
