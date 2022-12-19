@@ -717,6 +717,18 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   position: relative;
 }
 
+.product_video,
+#popup-container .pop_product_video {
+  width: 100% !important;
+  height: auto;
+}
+
+#product_pics .product_pic,
+#popup-container .pop_product_pic {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 #main--single-smykke .product_info .product_name {
   margin-top: 0;
   padding-block: 5px 10px;
@@ -724,6 +736,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   border-bottom: 2px solid var(--coldarkgreen);
   max-width: 85%;
   margin-inline: auto;
+  text-align: center;
 }
 
 #main--single-smykke .product_name::before {
@@ -776,6 +789,51 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
 
 .product_info h3.price {
   margin: 20px auto 10px;
+}
+
+/* POP UP */
+
+.hidden {
+  display: none !important;
+}
+
+#popup-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(47, 96, 90, 0.5);
+  z-index: 500;
+  display: flex;
+}
+
+#popup-container #close {
+  position: fixed;
+  padding: 20px;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  top: 4%;
+  left: 4%;
+}
+
+#popup-container .popup-container--inner {
+  background-color: var(--colyellow);
+  width: 80vw;
+  height: fit-content;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 25% auto auto;
+  border-radius: 5px;
+}
+
+#popup-container .popup-container--inner .popup-container--content {
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 /* 5.3.0 - OM KLEINES */

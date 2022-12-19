@@ -17,6 +17,17 @@
 
 <main id="main--single-smykke">
 
+<div id="popup-container" class="hidden">
+	<div id="close">&#x2715</div>
+	<div class="popup-container--inner">
+		<div class="popup-container--content">
+			<video class="pop_product_video" autoplay muted loop>  <source src="" type="video/mp4"> </video>
+
+			<img class="pop_product_pic" src="" alt="">
+		</div>
+	</div>
+</div>
+
 <div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
 	<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
 
@@ -75,7 +86,7 @@
 
 
 <template id="video_template">
-<video class="product_video" controls autoplay muted loop width="100%">
+<video class="product_video" autoplay muted loop>
 
   <source src="" type="video/mp4"> 
 
@@ -92,6 +103,9 @@
 	const materials_container = document.querySelector("#materials_container");
 	const video_template = document.querySelector("#video_template");
 	const product_videos_container = document.querySelector(".product_videos");
+
+	const product_pic_show = document.querySelectorAll(".product_pic");
+	const product_video_show = document.querySelectorAll(".product_video");
 
 	let material_name_count = 0;
 
@@ -117,6 +131,7 @@
 
 					const clone = video_template.cloneNode(true).content;
 					clone.querySelector(".product_video").src = video.guid;
+					clone.querySelector(".product_video").addEventListener("click", () => showVideo(video));
 					product_videos_container.appendChild(clone);
 
 
@@ -127,6 +142,7 @@
 
 					const clone = template.cloneNode(true).content;
 				clone.querySelector(".product_pic").src = picture.guid;
+				clone.querySelector(".product_pic").addEventListener("click", () => showPicture(picture));
 				product_pics_container.appendChild(clone);
 				})
 
@@ -143,29 +159,67 @@
 
 				
 				})
-
-
-			
-				
-				
-			
-				
-				
 				}
 
-				
-				
+    const popup = document.querySelector("#popup-container");
+	const popUpcontent = document.querySelector(".popup-container--content")
+	const pop_video = document.querySelector(".pop_product_video")
+	const pop_pic = document.querySelector(".pop_product_pic")
+	const closePop = document.querySelector("#close");
 
-		
-				
+	console.log("Indlæst const)")
 
+	function showVideo(video) {
 
+	if (window.matchMedia("(width >= 1000px)").matches) {
+		console.log("Nothing to see here.");
+	} else {
+  //Toggle the class "hide" from the whole popup window
+  popup.classList.toggle("hidden");
+  pop_pic.classList.toggle("hidden");
 
+  //Insert all information from dish to the specific tags
+  document.querySelector(".pop_product_video").src = video.guid;
 
+  // Add eventlistener for closing the popup box
+  closePop.addEventListener("click", closeDetailsVideo);
+  console.log("Åbnet ting - video");
+}
+	}
 
+// Function for closing the pop-up
+function closeDetailsVideo() {
+  popup.classList.toggle("hidden");
+  pop_pic.classList.toggle("hidden");
+  closePop.removeEventListener("click", closeDetailsVideo);
+  console.log("Lukket ting - video");
+}
 
-				
-				
+	function showPicture(picture) {
+
+	if (window.matchMedia("(width >= 1000px)").matches) {
+		console.log("Nothing to see here.");
+	} else {
+  //Toggle the class "hide" from the whole popup window
+  popup.classList.toggle("hidden");
+  pop_video.classList.toggle("hidden");
+
+  //Insert all information from dish to the specific tags
+  document.querySelector(".pop_product_pic").src = picture.guid;
+
+  // Add eventlistener for closing the popup box
+  closePop.addEventListener("click", closeDetailsPicture);
+  console.log("Åbnet ting - picture");
+}
+	}
+
+// Function for closing the pop-up
+function closeDetailsPicture() {
+  popup.classList.toggle("hidden");
+  pop_video.classList.toggle("hidden");
+  closePop.removeEventListener("click", closeDetailsPicture);
+  console.log("Lukket ting - picture");
+}
 
 
 getJson();
