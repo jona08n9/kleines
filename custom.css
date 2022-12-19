@@ -760,18 +760,11 @@ div.header_h1 h1 {
   .wp-block-column.butik p::before {
     margin-inline: 0;
   }
-}
-
-@media screen and (width >= 782px) {
-  /* FRONTPAGE */
-  body.home #site-content .post-inner.thin .entry-content > div:first-child,
-  body.home #site-content .post-inner.thin .entry-content > div:first-child > div > div {
-    padding-left: 0;
+  /* **********smykker loopview  *************** */
+  .loopview {
+    max-width: 1200px;
   }
-}
 
-/* 7.0.0 - MEDIA Q MIN-WIDTH 768PX */
-@media screen and (width >=768px) {
   #filter_buttons {
     display: flex;
     justify-content: center;
@@ -847,6 +840,14 @@ div.header_h1 h1 {
   .like_icon,
   .overlay {
     display: block;
+  }
+}
+
+@media screen and (width >= 782px) {
+  /* FRONTPAGE */
+  body.home #site-content .post-inner.thin .entry-content > div:first-child,
+  body.home #site-content .post-inner.thin .entry-content > div:first-child > div > div {
+    padding-left: 0;
   }
 }
 
