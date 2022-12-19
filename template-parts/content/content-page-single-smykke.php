@@ -64,9 +64,9 @@
 
 <template id="material_container">
 	<div class="material_container--inner">
-	<img class="material_pic" src="" alt="">
-	<p class="material_name"></p>
-	<div>
+		<img class="material_pic" src="" alt="">
+		<p class="material_name"></p>
+    </div>
 </template>
 
 <script>
