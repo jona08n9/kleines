@@ -770,6 +770,86 @@ div.header_h1 h1 {
   }
 }
 
+/* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
+@media screen and (width >=768px) {
+  #filter_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pin_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+  }
+  .card {
+    margin: 15px 10px;
+  }
+
+  .card:nth-child(1n) {
+    grid-row-end: span var(--card_small);
+  }
+  .card:nth-child(2n) {
+    grid-row-end: span var(--card_medium);
+  }
+
+  .card:nth-child(3n) {
+    grid-row-end: span var(--card_large);
+  }
+
+  .wp-block-columns.alignfull,
+  .alignfull:not(.has-background) .wp-block-columns {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .card img {
+    object-fit: cover;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product_quick_info {
+    grid-column: 1;
+    grid-row: 1;
+    place-content: end end;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 10px 0px;
+  }
+
+  .product_quick_info p {
+    color: var(--colwhite);
+  }
+
+  .product_price {
+    place-self: end end;
+  }
+
+  .card .like_icon {
+    max-width: 50px;
+
+    height: auto;
+    place-self: start end;
+  }
+
+  .product.card {
+    transition: all 150ms ease-in-out;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    scale: 110%;
+  }
+  .like_icon,
+  .overlay {
+    display: block;
+  }
+}
+
 @media screen and (width >= 1000px) {
   /* HEADER */
   #site-header .header-inner {
@@ -866,84 +946,22 @@ div.header_h1 h1 {
   div.entry-content > .alignfull:not(.wp-block-group.has-background) {
     margin-top: 1rem;
   }
+  /* SINGLE VIEW */
+  main#main--single-smykke div.wp-block-columns,
+  main#main--single-smykke div.wp-block-columns div.wp-block-columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-  /* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
-  @media screen and (width >=768px) {
-    #filter_buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+  main#main--single-smykke div.wp-block-columns section.content_shape {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
-    .pin_container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      grid-auto-rows: var(--row_increment);
-      justify-content: center;
-    }
-    .card {
-      margin: 15px 10px;
-    }
-
-    .card:nth-child(1n) {
-      grid-row-end: span var(--card_small);
-    }
-    .card:nth-child(2n) {
-      grid-row-end: span var(--card_medium);
-    }
-
-    .card:nth-child(3n) {
-      grid-row-end: span var(--card_large);
-    }
-
-    .wp-block-columns.alignfull,
-    .alignfull:not(.has-background) .wp-block-columns {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    .card img {
-      object-fit: cover;
-      height: 100%;
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .product_quick_info {
-      grid-column: 1;
-      grid-row: 1;
-      place-content: end end;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      padding: 10px 10px 0px;
-    }
-
-    .product_quick_info p {
-      color: var(--colwhite);
-    }
-
-    .product_price {
-      place-self: end end;
-    }
-
-    .card .like_icon {
-      max-width: 50px;
-
-      height: auto;
-      place-self: start end;
-    }
-
-    .product.card {
-      transition: all 150ms ease-in-out;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      scale: 110%;
-    }
-    .like_icon,
-    .overlay {
-      display: block;
-    }
+  main#main--single-smykke div.wp-block-columns section.content_shape div#product_pics,
+  main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
+    display: inline-block;
+    width: 49%;
   }
 }
