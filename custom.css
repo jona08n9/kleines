@@ -135,6 +135,11 @@ h3,
   color: var(--coldarkgreen);
 }
 
+.home .entry-content h3 {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
 /* 2.2.0 - P */
 p,
 .footer-credits p,
@@ -826,8 +831,9 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  margin: 50px auto auto;
+  margin: 150px auto auto;
   border-radius: 5px;
+  box-shadow: 3px 3px 8px var(--colblack);
 }
 
 #popup-container .popup-container--inner .popup-container--content {
