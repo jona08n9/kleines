@@ -19,6 +19,7 @@ TABLE OF CONTENT
         2.4.2 SECONDARY BUTTON
     2.5.0 - FORM
     2.6.0 - POLYGON / CLIP PATH
+    2.7.0 - LIST STYLE
 3.0.0 - HEADER
     3.1.0 - XXX
     3.2.0 - SEARCH MODULAR
@@ -299,6 +300,16 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
 }
 
 /* 2.6.0 - POLYGON / CLIP PATH */
+
+/* 2.7.0 - LIST-STYLE */
+
+.list-style {
+  font-family: var(--header3_p);
+  font-weight: 400;
+  font-size: var(--fsizep);
+  color: var(--coldarkgreen);
+  list-style: square;
+}
 
 /* 3.0.0 - HEADER */
 
