@@ -285,22 +285,6 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
 
 /* 2.6.0 - POLYGON / CLIP PATH */
 
-.poly_left {
-  clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-  background-color: #a5c6be;
-  padding-block-start: 200px;
-  padding-block-end: 150px;
-  margin-block-end: 0 !important;
-}
-
-.poly_right {
-  clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-  background-color: #fcd9d3;
-  padding-block-start: 200px;
-  padding-block-end: 150px;
-  margin-block-end: 0 !important;
-}
-
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
@@ -746,6 +730,23 @@ div.header_h1 h1 {
 
   .toggle.close-nav-toggle {
     padding-right: 20px;
+  }
+
+  /* 7.3.3.0 */
+  .poly_left {
+    clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #a5c6be;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
+  }
+
+  .poly_right {
+    clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
+    background-color: #fcd9d3;
+    padding-block-start: 200px;
+    padding-block-end: 150px;
+    margin-block-end: 0 !important;
   }
 
   /* 7.X.X.X - FOOTER */
