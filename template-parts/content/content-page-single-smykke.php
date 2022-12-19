@@ -22,8 +22,6 @@
 
 <section class="content_shape">
 
-
-
 <div id="product_pics">
 	
 

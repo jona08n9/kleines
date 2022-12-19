@@ -691,11 +691,11 @@ div.header_h1 h1 {
 /* 5.3.0 - SINGLE SMYKKER */
 
 main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
-  padding: 20px 30px;
-  margin: 30px auto;
+  padding: 30px;
+  margin: 15px auto 0;
 }
 
-#main--single-smyke .product_info {
+#main--single-smykke .product_info {
   position: relative;
 }
 
@@ -705,6 +705,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   border-top: 2px solid var(--coldarkgreen);
   border-bottom: 2px solid var(--coldarkgreen);
   max-width: 85%;
+  margin-inline: auto;
 }
 
 #main--single-smykke .product_name::before {
@@ -713,7 +714,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   height: 35px;
   z-index: 20;
   position: absolute;
-  top: -10px;
+  top: 0;
   left: 50%;
 }
 
@@ -943,6 +944,11 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
+
+  #materials_container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (700px <= width < 1000px) {
@@ -950,6 +956,16 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+  }
+}
+
+@media screen and (width <= 1000px) {
+  #main--single-smykke .content_shape {
+    padding-top: 0;
+  }
+
+  #product_pics {
+    padding-inline: 30px;
   }
 }
 
@@ -1071,6 +1087,11 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     justify-content: space-between;
   }
 
+  #materials_container {
+    display: flex;
+    flex-direction: column;
+  }
+
   main#main--single-smykke div.wp-block-columns section.content_shape div#product_pics {
     display: inline-block;
     width: 53%;
@@ -1093,5 +1114,14 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     position: absolute;
     top: -10px;
     left: 50%;
+  }
+}
+
+@media screen and (width >= 1221px) {
+  #materials_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
   }
 }
