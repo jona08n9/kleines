@@ -114,7 +114,7 @@
 
 	
 
-	const url="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
+	const url="https://madvigux.dk/kleines/wp-json/wp/v2/smykke/"+<?php echo get_the_ID() ?>;
 		async function getJson(){
 			console.log("id er", <?php echo get_the_ID() ?> )
 			let response = await fetch(url);
