@@ -290,6 +290,7 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   background-color: #a5c6be;
   padding-block-start: 200px;
   padding-block-end: 150px;
+  margin-block-end: 0 !important;
 }
 
 .poly_right {
@@ -297,6 +298,7 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   background-color: #fcd9d3;
   padding-block-start: 200px;
   padding-block-end: 150px;
+  margin-block-end: 0 !important;
 }
 
 /* 3.0.0 - HEADER */
