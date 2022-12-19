@@ -311,6 +311,9 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   list-style: square;
 }
 
+h1.has-text-align-center {
+  margin-top: 40px;
+}
 
 /* 3.0.0 - HEADER */
 
