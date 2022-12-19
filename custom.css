@@ -158,6 +158,7 @@ p,
   font-weight: 400;
   font-size: var(--fsizep);
   color: var(--coldarkgreen);
+  list-style: square;
 }
 
 /* 2.3.0 - A */
