@@ -311,22 +311,6 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   list-style: square;
 }
 
-.poly_green {
-  clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-  background-color: #a5c6be;
-  padding-block-start: 200px;
-  padding-block-end: 150px;
-  margin-block-end: 0 !important;
-}
-
-.poly_pink {
-  clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
-  background-color: #fcd9d3;
-  padding-block-start: 200px;
-  padding-block-end: 150px;
-  margin-block-end: 0 !important;
-}
-
 /* 3.0.0 - HEADER */
 
 #site-header.header-footer-group {
