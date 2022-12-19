@@ -73,13 +73,13 @@
 	// variabler til filtrering
 	let categories;
 	let filter_product ="22";
-	const catUrl ="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-json/wp/v2/categories";
+	const catUrl ="https://madvigux.dk/kleines/wp-json/wp/v2/categories";
 
 	  // variabler til at hente og indsætte producter
 	  let products;
 	  const product_loopview_container = document.querySelector("#product_loopview_container");
 	  const template = document.querySelector("template");
-	  const url = "http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-json/wp/v2/smykke?per_page=100";
+	  const url = "https://madvigux.dk/kleines/wp-json/wp/v2/smykke?per_page=100";
 
 
 
