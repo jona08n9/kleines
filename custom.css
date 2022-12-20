@@ -671,10 +671,6 @@ div.wp-block-column p.link-tekst a:hover {
   text-underline-offset: 3px;
 }
 
-.front_page_splash_poly {
-  clip-path: polygon(44.63% -3.87%, 100.56% -4.33%, 92.33% 49.33%, 99.37% 99.09%, -2.47% 99.05%, -2.19% 14.33%, 0.05% -3.98%);
-}
-
 /* 5.2.0 - SMYKKER  */
 
 .loopview h3 {
@@ -1289,6 +1285,10 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     position: absolute;
     top: -10px;
     left: 50%;
+  }
+
+  .front_page_splash_poly {
+    clip-path: polygon(44.63% -3.87%, 100.56% -4.33%, 92.33% 49.33%, 99.37% 99.09%, -2.47% 99.05%, -2.19% 14.33%, 0.05% -3.98%);
   }
 }
 
