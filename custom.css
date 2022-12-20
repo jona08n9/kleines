@@ -100,6 +100,11 @@ ol {
   margin-inline-start: 0;
 }
 
+#site-content .poly_pink,
+#site-content .poly_green {
+  padding-inline: 1rem !important;
+}
+
 /* 2.1.0 - HEADERS H1-H3 */
 h1,
 .entry-content h1,
@@ -149,6 +154,7 @@ p,
   font-size: var(--fsizep);
   color: var(--coldarkgreen);
   max-width: 65ch;
+  margin-inline: auto;
 }
 
 .entry-content p,
@@ -173,6 +179,12 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+}
+
+#site-content .poly_green h3,
+#site-content .poly_green p,
+#site-content .poly_green a {
+  color: var(--colblack);
 }
 
 /* 2.4.0 - BUTTONS */
@@ -575,7 +587,9 @@ div.ancestor-wrapper a:hover {
 /* 2.x.3 - H1 IKONER */
 
 div.wp-block-column h1::before,
-div.header_h1 h1::before {
+div.wp-block-column.relative h1::before,
+div.header_h1 h1::before,
+.relative h1.om-kleines--h1::before {
   content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
   width: 30px;
   height: 40px;
@@ -585,6 +599,9 @@ div.header_h1 h1::before {
   left: 50%;
 }
 
+.relative > .wp-block-column {
+  position: relative;
+}
 /* 5.0.0 - PAGES
 
     /* 5.1.0 - FONT PAGE */
@@ -850,6 +867,22 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   height: auto;
   margin: auto;
   padding: 20px;
+}
+
+/* 5.3.0 - STOERRELSESGUIDE */
+
+#site-content .stoerrelsesguide {
+  max-width: 1500px;
+}
+
+#site-content .stoerrelsesguide p,
+#site-content .stoerrelsesguide li {
+  margin-inline: auto;
+}
+
+.stoerrelsesguide > .wp-block-column > .relative {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* 5.3.0 - OM KLEINES */
