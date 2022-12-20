@@ -125,7 +125,7 @@
 		this.classList.add("chosen");
 		showProducts();
 
-		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name;
+		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name.charAt(0).toUpperCase() + this.dataset.type_name.slice(1);
 
 
 	}
