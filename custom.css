@@ -1288,7 +1288,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
     padding: 20px 30px;
     background-color: var(--colpink);
     position: sticky;
-    top: 15%;
+    top: 12%;
   }
 
   #main--single-smykke .product_name::before {
