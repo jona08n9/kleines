@@ -49,7 +49,7 @@
 <div class="grid">
 
 <div id="materials_container">
-<p class="om-smykket--text">Brugte materialer</p>
+<p class="om-smykket--text">Smykket består af</p>
 	
 </div>
 <button class="put_in_basket_btn">Læg i kurv</button>
