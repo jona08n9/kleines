@@ -100,6 +100,11 @@ ol {
   margin-inline-start: 0;
 }
 
+#site-content .poly_pink,
+#site-content .poly_green {
+  padding-inline: 1rem !important;
+}
+
 /* 2.1.0 - HEADERS H1-H3 */
 h1,
 .entry-content h1,
@@ -850,6 +855,17 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   height: auto;
   margin: auto;
   padding: 20px;
+}
+
+/* 5.3.0 - STOERRELSESGUIDE */
+
+#site-content .stoerrelsesguide {
+  max-width: 1500px;
+}
+
+#site-content .stoerrelsesguide p,
+#site-content .stoerrelsesguide li {
+  margin-inline: auto;
 }
 
 /* 5.3.0 - OM KLEINES */
