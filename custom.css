@@ -671,7 +671,7 @@ div.wp-block-column p.link-tekst a:hover {
   text-underline-offset: 3px;
 }
 
-.product_box_poli {
+div:has(h3.product_box_poly) {
   clip-path: polygon(3.42% -11.11%, 67.64% 13.24%, 101.23% 0.38%, 103.52% 100.12%, -2.47% 99.05%, -2.19% 14.33%, -4.1% 0.15%);
 }
 
