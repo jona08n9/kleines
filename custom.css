@@ -671,6 +671,10 @@ div.wp-block-column p.link-tekst a:hover {
   text-underline-offset: 3px;
 }
 
+.front_page_splash_poly {
+  clip-path: polygon(63.02% -3.41%, 88.25% 1.14%, 92.33% 49.33%, 100.89% 99.09%, -2.47% 99.05%, -2.19% 14.33%, 0.05% -3.98%);
+}
+
 /* 5.2.0 - SMYKKER  */
 
 .loopview h3 {
