@@ -113,7 +113,6 @@ h1.entry-title {
   font-family: var(--header1_2);
   font-weight: 800;
   font-size: var(--fsize1);
-  text-transform: uppercase;
   color: var(--coldarkgreen);
   margin: 30px auto 20px;
   padding-block: 18px 26px;
@@ -125,6 +124,7 @@ h1.entry-title {
 h2,
 .entry-content h2,
 #site-content .entry-content h2 {
+  text-transform: uppercase;
   font-family: var(--header1_2);
   font-weight: 600;
   font-size: var(--fsize2);
