@@ -113,7 +113,6 @@ h1.entry-title {
   font-family: var(--header1_2);
   font-weight: 800;
   font-size: var(--fsize1);
-  text-transform: uppercase;
   color: var(--coldarkgreen);
   margin: 30px auto 20px;
   padding-block: 18px 26px;
@@ -129,6 +128,7 @@ h2,
   font-weight: 600;
   font-size: var(--fsize2);
   color: var(--coldarkgreen);
+  text-transform: uppercase;
 }
 
 h3,
