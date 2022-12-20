@@ -869,6 +869,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
 /* 6.0.0 - MEDIA Q MIN-WIDTH 500PX */
 @media screen and (width >= 500px) {
   .poly_green {
+    -webkit-clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
     clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
     background-color: #a5c6be;
     padding-block-start: 200px;
@@ -877,6 +878,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 
   .poly_pink {
+    -webkit-clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
     clip-path: polygon(76.24% 0.92%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
     background-color: #fcd9d3;
     padding-block-start: 200px;
