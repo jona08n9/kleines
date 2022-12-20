@@ -187,6 +187,17 @@ a:active {
   color: var(--colblack);
 }
 
+a.link-stoerrelsesguide {
+  font-weight: 600;
+  color: var(--coldarkgreen);
+  text-decoration: none;
+}
+
+a.link-stoerrelsesguide:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* 2.4.0 - BUTTONS */
 
 /* 2.4.1 - PRIMARY BUTTON */

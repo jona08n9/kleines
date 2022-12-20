@@ -45,6 +45,7 @@
 <h3 class="price"></h3>
 <p class="om-smykket--text">Om smykket:</p>
 <p class="product_text"></p>
+<p><a class="link-stoerrelsesguide" href="https://madvigux.dk/kleines/storrelsesguide/"> I tvivl om din ringstørrelse? Se vores guide her. </a> </p>
 
 <div class="grid">
 
