@@ -9,41 +9,58 @@ TABLE OF CONTENT
     1.1.0 VARIABLES
         1.1.1 COLORS
         1.1.2 FONTS
+        1.1.3 PINTEREST GRID VARIABLES
+
 2.0.0 - GENEREL STYLING 
     2.1.0 - HEADERS H1-H3
-        2.1.1 - LINE BY H2
-    2.2.0 - P
+      2.1.1 H1 ICONS
+    2.2.0 - P, OL og LI
     2.3.0 - A
-    2.4.0 - BUTTONS
-        2.4.1 PRIMARY BUTTON
-        2.4.2 SECONDARY BUTTON
-    2.5.0 - FORM
-    2.6.0 - POLYGON / CLIP PATH
-    2.7.0 - LIST STYLE
+    2.4.0 - POLY FONT COLOR EDITS
+    2.5.0 - BUTTONS
+        2.5.1 PRIMARY BUTTON
+        2.5.2 SECONDARY BUTTON
+        2.5.3 - FILTER BUTTONS
+    2.6.0 - FORM
+    2.7.0 - POLYGON / CLIP PATH
+    2.8.0 - LIST STYLE
+
 3.0.0 - HEADER
-    3.1.0 - XXX
-    3.2.0 - SEARCH MODULAR
+    3.1.0 - SEARCH MODULAR
+      3.1.1 SEARCH ICON
+      3.1.2 - MODULAR
+        3.1.2.1 - SEARCH MODULAR
+        3.2.2.2 - MENU MODULAR
 
 4.0.0 - FOOTER
+  4.1.0 - ICONS
+    4.1.1 - BUTIK OG ÅBNINGSTID IKONER
+    4.1.2 - SOME IKONER
 
 5.0.0 - PAGES
-    5.1.0 - FONT PAGE
-    5.2.0 - SMYKKER 
-    5.3.0 - OM KLEINES
-    5.4.0 - GAVEKORT TIL KLEINES
-    5.5.0 - KONTAKT
+    5.1.0 - FRONT PAGE
+    5.2.0 - SMYKKER
+    5.3.0 - SINGLE SMYKKER
+      5.3.1 - POP UP
+    5.4.0 - STØRRELSESGUIDE 
+    5.5.0 - GAVEKORT TIL KLEINES
 
-6.0.0 - MEDIA Q MIN-WIDTH 500PX
-
-7.0.0 - MEDIA Q MIN-WIDTH 767PX
-    7.3.2.0 - SEARCH MODULAR
+6.0.0 - MEDIA Q
+  6.1.0 - WIDTH < 700PX
+  6.2.0 - WIDTH >= 500PX
+  6.3.0 - WIDTH >= 700PX
+  6.4.0 - WIDTH >= 782PX
+  6.5.0 - 700px <= WIDTH < 1000PX
+  6.6.0 - WIDTH <= 1000PX
+  6.7.0 - WIDTH >= 1000PX
+  6.8.0 - WIDTH >= 1221PX
 ____________________________________________________
 
-/*** 1.0.0 - ROOT ***/
+/**** 1.0.0 - ROOT ****/
 * {
-  /* 1.1.0 - VARIABLES */
+  /*** 1.1.0 - VARIABLES ***/
 
-  /* 1.1.1 - COLORS */
+  /** 1.1.1 - COLORS **/
   --colwhite: #faf9f5;
   --colblack: #303030;
   --colyellow: #faf8ea;
@@ -53,7 +70,7 @@ ____________________________________________________
   --collightgreen: #a5c6be;
   --colpink: #fcd9d3;
 
-  /* 1.1.2 - Fonts  */
+  /** 1.1.2 - Fonts  **/
   --header1_2: playfair-display, serif;
   --header3_p: montserrat, sans-serif;
   --fsize1: 48px;
@@ -68,7 +85,7 @@ ____________________________________________________
 
   font-size: 16px;
 
-  /* pinterest_grid_variables */
+  /** 1.1.3 PINTEREST GRID VARIABLES **/
   --card_width: 250px;
   --card_border_radius: 16px;
   --row_increment: 10px;
@@ -77,7 +94,7 @@ ____________________________________________________
   --card_large: 55;
 }
 
-/* 2.0.0 - GENEREL STYLING */
+/****2.0.0 - GENEREL STYLING ****/
 
 .entry-content,
 body article.page {
@@ -100,12 +117,7 @@ ol {
   margin-inline-start: 0;
 }
 
-#site-content .poly_pink,
-#site-content .poly_green {
-  padding-inline: 1rem !important;
-}
-
-/* 2.1.0 - HEADERS H1-H3 */
+/** 2.1.0 - HEADERS H1-H3 ***/
 h1,
 .entry-content h1,
 div.entry-content .wp-block-column h1,
@@ -145,7 +157,26 @@ h3,
   margin-inline: auto;
 }
 
-/* 2.2.0 - P */
+/** 2.1.1 - H1 ICONS **/
+
+div.wp-block-column h1::before,
+div.wp-block-column.relative h1::before,
+div.header_h1 h1::before,
+.relative h1.om-kleines--h1::before {
+  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
+  width: 30px;
+  height: 40px;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.relative > .wp-block-column {
+  position: relative;
+}
+
+/*** 2.2.0 - P, OL og LI ***/
 p,
 .footer-credits p,
 .wp-block-column ol li {
@@ -166,7 +197,7 @@ p,
   padding-inline-start: 20px !important;
 }
 
-/* 2.3.0 - A */
+/*** 2.3.0 - A ***/
 a {
   font: var(--body);
   font-size: var(--fsizep);
@@ -181,12 +212,6 @@ a:active {
   text-decoration: none;
 }
 
-#site-content .poly_green h3,
-#site-content .poly_green p,
-#site-content .poly_green a {
-  color: var(--colblack);
-}
-
 a.link-stoerrelsesguide {
   font-weight: 600;
   color: var(--coldarkgreen);
@@ -198,9 +223,19 @@ a.link-stoerrelsesguide:hover {
   text-underline-offset: 2px;
 }
 
-/* 2.4.0 - BUTTONS */
+/*** 2.4.0 - POLY FONT COLOR EDITS ***/
+#site-content .poly_green h3,
+#site-content .poly_green p,
+#site-content .poly_green a {
+  color: var(--colblack);
+}
 
-/* 2.4.1 - PRIMARY BUTTON */
+div:has(> h3.product_box_poly) {
+  clip-path: polygon(3.42% -11.11%, 67.64% 13.24%, 101.23% 0.38%, 103.52% 100.12%, -2.47% 99.05%, -2.19% 14.33%, -4.1% 0.15%);
+}
+/*** 2.5.0 - BUTTONS ****/
+
+/** 2.5.1 - PRIMARY BUTTON **/
 
 button.primary {
   border: none;
@@ -221,7 +256,7 @@ button.primary:focus {
   color: var(--coldarkgreen);
 }
 
-/* 2.4.2 - SECONDARY BUTTON */
+/** 2.5.2 - SECONDARY BUTTON **/
 
 button.secondary {
   border: var(--coldarkgreen);
@@ -241,7 +276,7 @@ button.secondary:focus {
   color: var(---coldark);
 }
 
-/* 2.4.3 - FILTER BUTTONS */
+/** 2.5.3 - FILTER BUTTONS **/
 
 #filter_buttons button,
 #main--single-smykke .put_in_basket_btn,
@@ -285,7 +320,7 @@ button.secondary:focus {
   text-decoration: none;
 }
 
-/* 2.5.0 - FORM */
+/*** 2.6.0 - FORM ***/
 
 div.wpforms-container-full .wpforms-form label.wpforms-field-label,
 div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
@@ -330,9 +365,14 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   padding: 11px 19px;
 }
 
-/* 2.6.0 - POLYGON / CLIP PATH */
+/*** 2.7.0 - POLYGON / CLIP PATH ***/
 
-/* 2.7.0 - LIST-STYLE */
+#site-content .poly_pink,
+#site-content .poly_green {
+  padding-inline: 1rem !important;
+}
+
+/*** 2.8.0 - LIST-STYLE ***/
 
 .list-style {
   font-family: var(--header3_p);
@@ -345,17 +385,15 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   margin-top: 40px;
 }
 
-/* 3.0.0 - HEADER */
+/**** 3.0.0 - HEADER ****/
 
 #site-header.header-footer-group {
   background-color: var(--coldarkgreen);
 }
 
-/* 3.1.0 - XXX */
+/*** 3.1.0 - SEARCH MODULAR ***/
 
-/* 3.2.0 - SEARCH MODULAR */
-
-/* 3.2.1 SEARCH ICON */
+/** 3.1.1 - SEARCH ICON **/
 
 .nav-toggle .toggle-icon svg path,
 #site-header .search-toggle .toggle-icon svg path,
@@ -370,7 +408,7 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
   color: var(--colgold);
 }
 
-/* 3.2.2 - MODULAR */
+/** 3.1.2 - MODULAR **/
 
 /* 3.2.2.1 - SEARCH MODULAR */
 
@@ -439,7 +477,6 @@ div.wpforms-container div.wpforms-submit-container button.wpforms-submit:focus,
 .toggle.sub-menu-toggle svg.svg-icon polygon {
   fill: var(--colgold);
 }
-
 /* 3.2.2.2 - MENU MODULAR */
 
 .mobile-menu li.menu-item {
@@ -484,7 +521,7 @@ div.ancestor-wrapper a:hover {
   padding-left: 2.5rem;
 }
 
-/* 4.0.0 - FOOTER */
+/**** 4.0.0 - FOOTER ****/
 
 .footer-nav-widgets-wrapper.header-footer-group {
   background-color: var(--coldarkgreen);
@@ -556,9 +593,9 @@ div.ancestor-wrapper a:hover {
   margin-inline: auto;
 }
 
-/* 4.X.0 - ICONS */
+/*** 4.1.0 - ICONS ***/
 
-/* 4.x.1 - BUTIK OG ÅBNINGSTID IKONER */
+/** 4.1.1 - BUTIK OG ÅBNINGSTID IKONER **/
 
 .wp-block-column.butik p::before {
   display: block;
@@ -579,7 +616,7 @@ div.ancestor-wrapper a:hover {
   content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/icon_phone.svg");
 }
 
-/* 4.x.2 - SOME IKONER */
+/** 4.1.2 - SOME IKONER **/
 
 .footer-widgets ul.wp-block-social-links li.wp-social-link {
   background-color: transparent;
@@ -595,27 +632,9 @@ div.ancestor-wrapper a:hover {
   margin: 0;
 }
 
-/* 2.x.3 - H1 IKONER */
+/**** 5.0.0 - PAGES ***/
 
-div.wp-block-column h1::before,
-div.wp-block-column.relative h1::before,
-div.header_h1 h1::before,
-.relative h1.om-kleines--h1::before {
-  content: url("https://www.madvigux.dk/kleines/wp-content/themes/kleines/template-parts/icons/krypStroke.svg");
-  width: 30px;
-  height: 40px;
-  z-index: 20;
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-
-.relative > .wp-block-column {
-  position: relative;
-}
-/* 5.0.0 - PAGES
-
-    /* 5.1.0 - FONT PAGE */
+/*** 5.1.0 - FRONT PAGE ***/
 
 #site-content header.entry-header {
   display: none;
@@ -671,11 +690,7 @@ div.wp-block-column p.link-tekst a:hover {
   text-underline-offset: 3px;
 }
 
-div:has(> h3.product_box_poly) {
-  clip-path: polygon(3.42% -11.11%, 67.64% 13.24%, 101.23% 0.38%, 103.52% 100.12%, -2.47% 99.05%, -2.19% 14.33%, -4.1% 0.15%);
-}
-
-/* 5.2.0 - SMYKKER  */
+/*** 5.2.0 - SMYKKER  ***/
 
 .loopview h3 {
   text-align: center;
@@ -752,7 +767,7 @@ div.header_h1 h1 {
   margin-top: 20px;
 }
 
-/* 5.3.0 - SINGLE SMYKKER */
+/*** 5.3.0 - SINGLE SMYKKER ***/
 
 main#main--single-smykke div.wp-block-columns section.content_shape div.product_info {
   padding: 30px;
@@ -837,7 +852,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   margin: 20px auto 10px;
 }
 
-/* POP UP */
+/** 5.3.1 - POP UP **/
 
 .hidden {
   display: none !important;
@@ -884,7 +899,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   padding: 20px;
 }
 
-/* 5.3.0 - STOERRELSESGUIDE */
+/*** 5.4.0 - STOERRELSESGUIDE ***/
 
 #site-content .stoerrelsesguide {
   max-width: 1500px;
@@ -900,8 +915,6 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   margin-bottom: 0 !important;
 }
 
-/* 5.3.0 - OM KLEINES */
-
 /* 5.4.0 - GAVEKORT TIL KLEINES */
 
 .alignfull:not(.has-background) div.wp-block-columns .gavekort-knapper {
@@ -912,9 +925,38 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   padding: 0;
 }
 
-/* 5.5.0 - KONTAKT */
+/**** 6.0.0 -  MEDIA Q ****/
 
-/* 6.0.0 - MEDIA Q MIN-WIDTH 500PX */
+/*** 6.1.0 - WIDTH < 700PX ***/
+@media screen and (width < 700px) {
+  #product_pics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #materials_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .poly_green {
+    clip-path: polygon(0px 7%, 32.48% 3px, 99.49% 7.79%, 99.29% 97.02%, 3px 99.98%, 0px 30%);
+    background-color: #a5c6be;
+    padding-block-start: 120px;
+    padding-block-end: 70px;
+    margin-block-end: 0 !important;
+  }
+
+  .poly_pink {
+    clip-path: polygon(0px 3.5%, 58.45% 6px, 99.75% 1.84%, 99.5% 96.15%, 2px 99.1%, 0px 30%);
+    background-color: #fcd9d3;
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+    margin-block-end: 0 !important;
+  }
+}
+
+/*** 6.2.0 - WIDTH >= 500PX ***/
 @media screen and (width >= 500px) {
   .poly_green {
     -webkit-clip-path: polygon(20.38% 5.89%, 100.68% 17.9%, 103.47% 89.98%, -2.47% 99.05%, -2.19% 14.33%);
@@ -935,14 +977,11 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
-/* 7.0.0 - MEDIA Q MIN-WIDTH 767PX */
+/*** 6.3.0 - WIDTH >= 700PX ***/
 @media screen and (width >=700px) {
-  /* 7.2.2.0 P */
   p {
     max-width: 65ch;
   }
-
-  /* 7.3.2.0 - SEARCH MODULAR */
 
   .search-modal.show-modal.active {
     background: none;
@@ -971,10 +1010,6 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   .toggle.close-nav-toggle {
     padding-right: 20px;
   }
-
-  /* 7.3.3.0 */
-
-  /* 7.X.X.X - FOOTER */
 
   .footer-widgets-outer-wrapper {
     padding-bottom: 0;
@@ -1006,7 +1041,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   .wp-block-column.butik p::before {
     margin-inline: 0;
   }
-  /* **********smykker loopview  *************** */
+
   .loopview {
     max-width: 1200px;
   }
@@ -1089,6 +1124,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
+/*** 6.4.0 - WIDTH >= 782PX ***/
 @media screen and (width >= 782px) {
   /* FRONTPAGE */
   body.home #site-content .post-inner.thin .entry-content > div:first-child,
@@ -1097,35 +1133,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
-/* Vinduet er mindre end 700px */
-@media screen and (width < 700px) {
-  #product_pics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-  }
-
-  #materials_container {
-    display: flex;
-    flex-direction: column;
-  }
-  .poly_green {
-    clip-path: polygon(0px 7%, 32.48% 3px, 99.49% 7.79%, 99.29% 97.02%, 3px 99.98%, 0px 30%);
-    background-color: #a5c6be;
-    padding-block-start: 120px;
-    padding-block-end: 70px;
-    margin-block-end: 0 !important;
-  }
-
-  .poly_pink {
-    clip-path: polygon(0px 3.5%, 58.45% 6px, 99.75% 1.84%, 99.5% 96.15%, 2px 99.1%, 0px 30%);
-    background-color: #fcd9d3;
-    padding-block-start: 80px;
-    padding-block-end: 80px;
-    margin-block-end: 0 !important;
-  }
-}
-
+/*** 6.5.0 - 700px <= WIDTH < 1000PX ***/
 @media screen and (700px <= width < 1000px) {
   #product_pics {
     display: grid;
@@ -1134,6 +1142,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
+/*** 6.6.0 - WIDTH <= 1000PX ***/
 @media screen and (width <= 1000px) {
   #main--single-smykke .content_shape {
     padding-top: 0;
@@ -1144,6 +1153,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
+/*** 6.7.0 - WIDTH >= 1000PX ***/
 @media screen and (width >= 1000px) {
   /* HEADER */
   #site-header .header-inner {
@@ -1296,6 +1306,7 @@ main#main--single-smykke div.wp-block-columns section.content_shape div.product_
   }
 }
 
+/*** 6.8.0 - WIDTH >= 1221PX ***/
 @media screen and (width >= 1221px) {
   #materials_container {
     display: grid;
