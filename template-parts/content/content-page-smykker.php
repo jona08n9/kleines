@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The default template for displaying content
  *
@@ -14,60 +15,60 @@
 ?>
 
 <main>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-<div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
-	<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
+		<div class="is-layout-flex wp-container-6 wp-block-columns alignfull">
+			<div class="is-layout-flex wp-container-4 wp-block-columns alignfull are-vertically-aligned-top">
 
-<div class="content_shape">
-	<div class="header_h1">
-		<h1>Alle smykker</h1>
-	</div>
-	<div class="info_text">
-		<p>Alle Kleines designs er unikke og priserne kan derfor variere. For mine produkter er der ca. 14 dages leveringstid. Har du nogle specifikke ønsker eller spørgsmål, så udfyld kontaktformuleren.</p>
-	</div>
+				<div class="content_shape">
+					<div class="header_h1">
+						<h1>Alle smykker</h1>
+					</div>
+					<div class="info_text">
+						<p>Alle Kleines designs er unikke og priserne kan derfor variere. For mine produkter er der ca. 14 dages leveringstid. Har du nogle specifikke ønsker eller spørgsmål, så udfyld kontaktformuleren.</p>
+					</div>
 
-	<div class="loopview">
-		<h3>Kleines smykke univers</h3>
-		<div id="filter_buttons">
-			<button class="chosen" data-type="all" data-type_name="alle smykker">Alle smykker</button>
-			<button data-type="7"  data-type_name="halskæder" >Halskæder</button>
-			<button  data-type="22" data-type_name="ringe" >Ringe</button>
-			<button  data-type="3" data-type_name="øreringe" >Øreringe</button>
+					<div class="loopview">
+						<h3>Kleines smykke univers</h3>
+						<div id="filter_buttons">
+							<button class="chosen" data-type="all" data-type_name="alle smykker">Alle smykker</button>
+							<button data-type="7" data-type_name="halskæder">Halskæder</button>
+							<button data-type="22" data-type_name="ringe">Ringe</button>
+							<button data-type="3" data-type_name="øreringe">Øreringe</button>
+						</div>
+
+
+						<section id="product_loopview_container" class="pin_container poly_pink ">
+
+						</section>
+					</div>
+
+				</div>
+			</div>
 		</div>
 
 
-		<section id="product_loopview_container" class="pin_container">
-
-		</section>
-	</div>
-
-</div>
-</div>
-</div>
 
 
-
-
-</article><!-- .post -->
+	</article><!-- .post -->
 
 
 </main>
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+<?php get_template_part('template-parts/footer-menus-widgets'); ?>
 
 
 <template>
-<article class="product card ">
+	<article class="product card ">
 
-	<img class="main_product_pic" src="" alt="">
-	<img class="like_icon" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/heart.svg" alt="Tryk her for at gemme">
-<img class="overlay" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/overlay_test_3.png">
-	<div class="product_quick_info">
-	<p class="product_name"></p>
-	<p class="product_price"></p>
-	</div>
-	
-</article>
+		<img class="main_product_pic" src="" alt="">
+		<img class="like_icon" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/heart.svg" alt="Tryk her for at gemme">
+		<img class="overlay" src="http://tobiasroland.dk/kea/10_eksamensopgave/kleines_tobias_domain/wordpress/wp-content/uploads/2022/12/overlay_test_3.png">
+		<div class="product_quick_info">
+			<p class="product_name"></p>
+			<p class="product_price"></p>
+		</div>
+
+	</article>
 </template>
 
 
@@ -75,92 +76,88 @@
 
 
 <script>
-// ********************             opretter variabler             **************************
+	// ********************             opretter variabler             **************************
 
 
 	// variabler til filtrering
 	let categories;
-	let filter_product ="all";
-	const catUrl ="https://madvigux.dk/kleines/wp-json/wp/v2/categories";
+	let filter_product = "all";
+	const catUrl = "https://madvigux.dk/kleines/wp-json/wp/v2/categories";
 
-	  // variabler til at hente og indsætte producter
-	  let products;
-	  const product_loopview_container = document.querySelector("#product_loopview_container");
-	  const template = document.querySelector("template");
-	  const url = "https://madvigux.dk/kleines/wp-json/wp/v2/smykke?per_page=100";
-
-
-
-	  // Henter json med producter og json med categorier
-		async function getJson(){
-			let response = await fetch(url);
-			let catdata = await fetch(catUrl);
-			products = await response.json();
-			categories = await catdata.json();
-			addEventListenerToButtons();
-			showProducts();
-			console.log(categories);
-		}
+	// variabler til at hente og indsætte producter
+	let products;
+	const product_loopview_container = document.querySelector("#product_loopview_container");
+	const template = document.querySelector("template");
+	const url = "https://madvigux.dk/kleines/wp-json/wp/v2/smykke?per_page=100";
 
 
-		//  tilføjer eventListener til knapper, og kalder filter funktionen ved klik
-		function addEventListenerToButtons(){
-		document.querySelectorAll("#filter_buttons button").forEach(elm => {
-		elm.addEventListener("click", filter);
-			})
-		}
 
-		// tager værdien for dataset.sport på den knap der er 
-	// blevet klikket på og tildeler denne værdi til variablen 
-	// filter_sport. Herefter kaldes funktionen visHold.
-	function filter(){
-
-		document.querySelectorAll("#filter_buttons button").forEach(elm => {
-			elm.classList.remove("chosen");
-			
-		})
-		
-		filter_product = this.dataset.type;
-		this.classList.add("chosen");
+	// Henter json med producter og json med categorier
+	async function getJson() {
+		let response = await fetch(url);
+		let catdata = await fetch(catUrl);
+		products = await response.json();
+		categories = await catdata.json();
+		addEventListenerToButtons();
 		showProducts();
-	
-		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name;
-
-	
+		console.log(categories);
 	}
 
 
-		// funktionen startermed at rydde indhold i section med id product_loopview_container. herefter kører den et forEach loop på alle products i vores array.
-		// inden at products kan blive vist bliver der tjekket om variablen filterproduct endten har værdien "all" eller om product indeholder den samme værdi som filter_products variablen.
-		function showProducts(){
+	//  tilføjer eventListener til knapper, og kalder filter funktionen ved klik
+	function addEventListenerToButtons() {
+		document.querySelectorAll("#filter_buttons button").forEach(elm => {
+			elm.addEventListener("click", filter);
+		})
+	}
 
-			product_loopview_container.innerHTML ="";
+	// tager værdien for dataset.sport på den knap der er 
+	// blevet klikket på og tildeler denne værdi til variablen 
+	// filter_sport. Herefter kaldes funktionen visHold.
+	function filter() {
+
+		document.querySelectorAll("#filter_buttons button").forEach(elm => {
+			elm.classList.remove("chosen");
+
+		})
+
+		filter_product = this.dataset.type;
+		this.classList.add("chosen");
+		showProducts();
+
+		document.querySelector(".header_h1 h1").textContent = this.dataset.type_name;
+
+
+	}
+
+
+	// funktionen startermed at rydde indhold i section med id product_loopview_container. herefter kører den et forEach loop på alle products i vores array.
+	// inden at products kan blive vist bliver der tjekket om variablen filterproduct endten har værdien "all" eller om product indeholder den samme værdi som filter_products variablen.
+	function showProducts() {
+
+		product_loopview_container.innerHTML = "";
 
 		products.forEach(product => {
 
-		if (filter_product == "all" || product.categories.includes(parseInt(filter_product))){
+			if (filter_product == "all" || product.categories.includes(parseInt(filter_product))) {
 
-			const clone = template.cloneNode(true).content;
-			clone.querySelector(".main_product_pic").src = product.produktbillede[0].guid;
-			clone.querySelector(".product_name").textContent = product.title.rendered;
-			clone.querySelector(".product_price").textContent = product.pris + " kr.";
-
-
-			clone.querySelector(".product").addEventListener("click", () =>{
-					location.href = product.link;})
-		product_loopview_container.appendChild(clone);	
-}})}
+				const clone = template.cloneNode(true).content;
+				clone.querySelector(".main_product_pic").src = product.produktbillede[0].guid;
+				clone.querySelector(".product_name").textContent = product.title.rendered;
+				clone.querySelector(".product_price").textContent = product.pris + " kr.";
 
 
+				clone.querySelector(".product").addEventListener("click", () => {
+					location.href = product.link;
+				})
+				product_loopview_container.appendChild(clone);
+			}
+		})
+	}
 
 
 
-		getJson();
 
+
+	getJson();
 </script>
-
-
-
-
-
-
